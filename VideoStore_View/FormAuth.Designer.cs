@@ -99,18 +99,17 @@
             // 
             // materialLabelInfo
             // 
-            this.materialLabelInfo.AllowDrop = true;
             this.materialLabelInfo.AutoSize = true;
             this.materialLabelInfo.BackColor = System.Drawing.Color.Transparent;
             this.materialLabelInfo.Depth = 0;
             this.materialLabelInfo.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabelInfo.Location = new System.Drawing.Point(74, 71);
+            this.materialLabelInfo.ForeColor = System.Drawing.Color.Gray;
+            this.materialLabelInfo.Location = new System.Drawing.Point(84, 74);
             this.materialLabelInfo.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelInfo.Name = "materialLabelInfo";
-            this.materialLabelInfo.Size = new System.Drawing.Size(182, 19);
-            this.materialLabelInfo.TabIndex = 6;
-            this.materialLabelInfo.Text = "Введите логин и пароль";
+            this.materialLabelInfo.Size = new System.Drawing.Size(154, 19);
+            this.materialLabelInfo.TabIndex = 8;
+            this.materialLabelInfo.Text = "Заполните все поля";
             // 
             // FormAuth
             // 

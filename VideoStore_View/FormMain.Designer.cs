@@ -101,16 +101,17 @@
             // materialRaisedButton6
             // 
             this.materialRaisedButton6.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.materialRaisedButton6.Cursor = System.Windows.Forms.Cursors.Help;
             this.materialRaisedButton6.Depth = 0;
             this.materialRaisedButton6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.materialRaisedButton6.Location = new System.Drawing.Point(36, 279);
+            this.materialRaisedButton6.Location = new System.Drawing.Point(36, 269);
             this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton6.Name = "materialRaisedButton6";
             this.materialRaisedButton6.Primary = true;
-            this.materialRaisedButton6.Size = new System.Drawing.Size(264, 23);
+            this.materialRaisedButton6.Size = new System.Drawing.Size(264, 41);
             this.materialRaisedButton6.TabIndex = 5;
             this.materialRaisedButton6.Tag = "errrtete";
-            this.materialRaisedButton6.Text = "ОБ АВТОРЕ И ПРОГРАММЕ";
+            this.materialRaisedButton6.Text = " сведения об авторе и назначении программы";
             this.materialRaisedButton6.UseVisualStyleBackColor = false;
             this.materialRaisedButton6.Click += new System.EventHandler(this.materialRaisedButton6_Click);
             // 
@@ -133,7 +134,7 @@
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(339, 315);
+            this.ClientSize = new System.Drawing.Size(339, 322);
             this.Controls.Add(this.materialRaisedButton7);
             this.Controls.Add(this.materialRaisedButton6);
             this.Controls.Add(this.materialRaisedButton5);
@@ -148,6 +149,7 @@
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Видеопрокат";
+            this.TransparencyKey = System.Drawing.Color.Transparent;
             this.ResumeLayout(false);
 
         }

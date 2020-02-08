@@ -26,20 +26,18 @@ namespace VideoStore_View
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
-           
+
         }
         private void materialRaisedButtonSignIn_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(materialSingleLineTextFieldLogin.Text))
             {
                 materialLabelInfo.ForeColor = Color.Red;
-                materialLabelInfo.Text = "Заполните все поля";
 
             }
             if (string.IsNullOrEmpty(materialSingleLineTextFieldPassword.Text))
             {
                 materialLabelInfo.ForeColor = Color.Red;
-                materialLabelInfo.Text = "Заполните все поля";
             }
             else
             {

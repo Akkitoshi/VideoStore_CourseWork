@@ -42,7 +42,7 @@
             this.Name = "FormNewClient";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormNewClient";
+            this.Text = "Заключение договора с новым клиентом";
             this.ResumeLayout(false);
 
         }

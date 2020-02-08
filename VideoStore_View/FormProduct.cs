@@ -1,5 +1,4 @@
-﻿using MaterialSkin.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +10,7 @@ using System.Windows.Forms;
 
 namespace VideoStore_View
 {
-    public partial class FormProduct : MaterialForm
+    public partial class FormProduct : Form
     {
         public FormProduct()
         {
