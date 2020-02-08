@@ -55,8 +55,7 @@ namespace VideoStore_Controller
             string pass = service.Encrypt("Login", password);
             User element = context.Users.FirstOrDefault(rec => rec.Login ==
           login && rec.Password == pass);
-            if (element.Role == "Продавец-консультант")
-            {
+
                 if (element != null)
                 {
                     result = "ok";
@@ -65,11 +64,6 @@ namespace VideoStore_Controller
                 {
                     result = "Неверный логин или пароль";
                 }
-            }
-            else
-            {
-                result = "Данная роль недоступна, выберите роль: Продавец-консультант";
-            }
             return result;
         }
     }

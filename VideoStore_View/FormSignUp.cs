@@ -16,11 +16,12 @@ namespace VideoStore_View
         private int? id;
         private readonly AuthController service;
         private readonly MaterialSkinManager materialSkinManager;
+
+
         public FormSignUp(AuthController service)
         {
             this.service = service;
             InitializeComponent();
-
             // Initialize MaterialSkinManager
             materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -34,27 +35,52 @@ namespace VideoStore_View
                 materialLabelInfo.ForeColor = Color.Red;
                 materialLabelInfo.Text = "Заполните поле ФИО";
             }
-            if (string.IsNullOrEmpty(materialComboBoxRole.Text))
+            else
             {
-                materialLabelInfo.ForeColor = Color.Red;
-                materialLabelInfo.Text = "Выберите роль";
-            }
-            if (string.IsNullOrEmpty(materialSingleLineTextFieldPosition.Text))
-            {
-                materialLabelInfo.ForeColor = Color.Red;
-                materialLabelInfo.Text = "Заполните поле должность";
-            }
-            if (string.IsNullOrEmpty(materialSingleLineTextFieldLogin.Text))
-            {
-                materialLabelInfo.ForeColor = Color.Red;
-                materialLabelInfo.Text = "Задайте логин";
-            }
-            if (string.IsNullOrEmpty(materialSingleLineTextFieldPassword.Text))
-            {
-                materialLabelInfo.ForeColor = Color.Red;
-                materialLabelInfo.Text = "Задайте пароль";
+                materialLabelInfo.ForeColor = Color.Gray;
+                materialLabelInfo.Text = "Заполните обязательные поля";
+                if (string.IsNullOrEmpty(materialComboBoxRole.Hint))
+                {
+                    materialLabelInfo.ForeColor = Color.Red;
+                    materialLabelInfo.Text = "Выберите роль";
+                }
+                else
+                {
+                    materialLabelInfo.ForeColor = Color.Gray;
+                    materialLabelInfo.Text = "Заполните обязательные поля";
+                    if (string.IsNullOrEmpty(materialSingleLineTextFieldPosition.Text))
+                    {
+                        materialLabelInfo.ForeColor = Color.Red;
+                        materialLabelInfo.Text = "Заполните поле должность";
+                    }
+                    else
+                    {
+                        materialLabelInfo.ForeColor = Color.Gray;
+                        materialLabelInfo.Text = "Заполните обязательные поля";
 
-                if (!(string.IsNullOrEmpty(materialSingleLineTextFieldPassword.Text) && string.IsNullOrEmpty(materialSingleLineTextFieldLogin.Text) && string.IsNullOrEmpty(materialSingleLineTextFieldPosition.Text) && string.IsNullOrEmpty(materialComboBoxRole.Text) && string.IsNullOrEmpty(materialSingleLineTextFieldFIO.Text)))
+                        if (string.IsNullOrEmpty(materialSingleLineTextFieldLogin.Text))
+                        {
+                            materialLabelInfo.ForeColor = Color.Red;
+                            materialLabelInfo.Text = "Задайте логин";
+                        }
+                        else
+                        {
+                            materialLabelInfo.ForeColor = Color.Gray;
+                            materialLabelInfo.Text = "Заполните обязательные поля";
+
+                            if (string.IsNullOrEmpty(materialSingleLineTextFieldPassword.Text))
+                            {
+                                materialLabelInfo.ForeColor = Color.Red;
+                                materialLabelInfo.Text = "Задайте пароль";
+
+                            }
+                        }
+
+                    }
+                }
+
+
+                if (!string.IsNullOrEmpty(materialSingleLineTextFieldPassword.Text) && !string.IsNullOrEmpty(materialSingleLineTextFieldLogin.Text) && !string.IsNullOrEmpty(materialSingleLineTextFieldPosition.Text) && !string.IsNullOrEmpty(materialComboBoxRole.Hint) && !string.IsNullOrEmpty(materialSingleLineTextFieldFIO.Text))
                     try
                     {
                         service.AddElement(new User
@@ -68,7 +94,14 @@ namespace VideoStore_View
 
                         materialLabelInfo.ForeColor = Color.DarkSeaGreen;
                         materialLabelInfo.Text = "Успешная регистрация";
+                        materialSingleLineTextFieldFIO.Enabled = false;
+                        materialComboBoxRole.Enabled = false;
+                        materialSingleLineTextFieldPosition.Enabled = false;
+                        materialSingleLineTextFieldLogin.Enabled = false;
+                        materialSingleLineTextFieldPassword.Enabled = false;
+                        materialRaisedButtonSignUp.Enabled = false;
                     }
+
                     catch
                     {
                         materialLabelInfo.ForeColor = Color.Red;
