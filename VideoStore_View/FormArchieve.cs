@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace VideoStore_View
 {
-    public partial class FormArchieve : Form
+    public partial class FormArchieve : MaterialForm
     {
         public FormArchieve()
         {

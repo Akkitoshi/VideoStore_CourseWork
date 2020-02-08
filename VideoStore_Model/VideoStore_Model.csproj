@@ -68,6 +68,11 @@
   <ItemGroup>
     <Compile Include="ClientCard.cs" />
     <Compile Include="ClientContract.cs" />
+    <Compile Include="Migrations\202002081336041_AddUsersTable.cs" />
+    <Compile Include="Migrations\202002081336041_AddUsersTable.designer.cs">
+      <DependentUpon>202002081336041_AddUsersTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service.cs" />
@@ -82,7 +87,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202002081336041_AddUsersTable.resx">
+      <DependentUpon>202002081336041_AddUsersTable.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

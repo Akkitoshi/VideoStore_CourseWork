@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VideoStore_Model
 {
-    class Product
+    public class Product
     {
     }
 }
