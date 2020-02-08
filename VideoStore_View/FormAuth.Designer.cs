@@ -34,7 +34,6 @@
             this.materialSingleLineTextFieldLogin = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextFieldPassword = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabelInfo = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.SuspendLayout();
             // 
             // materialRaisedButtonSignIn
@@ -113,26 +112,12 @@
             this.materialLabelInfo.TabIndex = 6;
             this.materialLabelInfo.Text = "Введите логин и пароль";
             // 
-            // materialTabSelector1
-            // 
-            this.materialTabSelector1.BackColor = System.Drawing.Color.White;
-            this.materialTabSelector1.BaseTabControl = null;
-            this.materialTabSelector1.Depth = 0;
-            this.materialTabSelector1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.materialTabSelector1.Location = new System.Drawing.Point(249, 30);
-            this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialTabSelector1.Name = "materialTabSelector1";
-            this.materialTabSelector1.Size = new System.Drawing.Size(75, 23);
-            this.materialTabSelector1.TabIndex = 7;
-            this.materialTabSelector1.Text = "тема";
-            // 
             // FormAuth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(336, 237);
-            this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.materialLabelInfo);
             this.Controls.Add(this.materialSingleLineTextFieldPassword);
             this.Controls.Add(this.materialSingleLineTextFieldLogin);
@@ -156,6 +141,5 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldLogin;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldPassword;
         private MaterialSkin.Controls.MaterialLabel materialLabelInfo;
-        private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
     }
 }

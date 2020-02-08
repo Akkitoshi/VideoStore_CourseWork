@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSignUp));
             this.materialSingleLineTextFieldFIO = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextFieldLogin = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextFieldPassword = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -35,7 +36,7 @@
             this.materialComboBoxRole = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialRaisedButtonSignUp = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialLabelInfo = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.labelRequiredFields = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // materialSingleLineTextFieldFIO
@@ -112,6 +113,7 @@
             this.materialComboBoxRole.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.materialComboBoxRole.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.materialComboBoxRole.Depth = 0;
+            this.materialComboBoxRole.Enabled = false;
             this.materialComboBoxRole.Hint = "Роль*";
             this.materialComboBoxRole.Location = new System.Drawing.Point(42, 130);
             this.materialComboBoxRole.MouseState = MaterialSkin.MouseState.HOVER;
@@ -152,27 +154,24 @@
             this.materialLabelInfo.TabIndex = 13;
             this.materialLabelInfo.Text = "Заполните все обязательные поля";
             // 
-            // materialLabel1
+            // labelRequiredFields
             // 
-            this.materialLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabel1.Cursor = System.Windows.Forms.Cursors.Help;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.Silver;
-            this.materialLabel1.Location = new System.Drawing.Point(42, 288);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(239, 19);
-            this.materialLabel1.TabIndex = 14;
-            this.materialLabel1.Text = "*обязательные для заполнения поля";
+            this.labelRequiredFields.AutoSize = true;
+            this.labelRequiredFields.BackColor = System.Drawing.Color.Transparent;
+            this.labelRequiredFields.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRequiredFields.ForeColor = System.Drawing.Color.Silver;
+            this.labelRequiredFields.Location = new System.Drawing.Point(55, 281);
+            this.labelRequiredFields.Name = "labelRequiredFields";
+            this.labelRequiredFields.Size = new System.Drawing.Size(195, 13);
+            this.labelRequiredFields.TabIndex = 14;
+            this.labelRequiredFields.Text = "*обязательные для заполнения поля";
             // 
             // FormSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(336, 316);
-            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.labelRequiredFields);
             this.Controls.Add(this.materialLabelInfo);
             this.Controls.Add(this.materialRaisedButtonSignUp);
             this.Controls.Add(this.materialComboBoxRole);
@@ -180,6 +179,7 @@
             this.Controls.Add(this.materialSingleLineTextFieldPassword);
             this.Controls.Add(this.materialSingleLineTextFieldLogin);
             this.Controls.Add(this.materialSingleLineTextFieldFIO);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormSignUp";
@@ -199,6 +199,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField materialComboBoxRole;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonSignUp;
         private MaterialSkin.Controls.MaterialLabel materialLabelInfo;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private System.Windows.Forms.Label labelRequiredFields;
     }
 }
