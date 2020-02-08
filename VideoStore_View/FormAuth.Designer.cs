@@ -39,10 +39,8 @@
             // 
             // materialRaisedButtonSignIn
             // 
-            this.materialRaisedButtonSignIn.AllowDrop = true;
             this.materialRaisedButtonSignIn.Depth = 0;
             this.materialRaisedButtonSignIn.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.materialRaisedButtonSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.materialRaisedButtonSignIn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.materialRaisedButtonSignIn.Location = new System.Drawing.Point(66, 173);
             this.materialRaisedButtonSignIn.MouseState = MaterialSkin.MouseState.HOVER;
@@ -53,11 +51,9 @@
             this.materialRaisedButtonSignIn.Text = "ВОЙТИ";
             this.materialRaisedButtonSignIn.UseVisualStyleBackColor = true;
             this.materialRaisedButtonSignIn.Click += new System.EventHandler(this.materialRaisedButtonSignIn_Click);
-            this.materialRaisedButtonSignIn.MouseCaptureChanged += new System.EventHandler(this.materialRaisedButtonSignIn_Click);
             // 
             // materialRaisedButtonSignUp
             // 
-            this.materialRaisedButtonSignUp.AllowDrop = true;
             this.materialRaisedButtonSignUp.Depth = 0;
             this.materialRaisedButtonSignUp.Location = new System.Drawing.Point(66, 202);
             this.materialRaisedButtonSignUp.MouseState = MaterialSkin.MouseState.HOVER;
@@ -71,7 +67,6 @@
             // 
             // materialSingleLineTextFieldLogin
             // 
-            this.materialSingleLineTextFieldLogin.AllowDrop = true;
             this.materialSingleLineTextFieldLogin.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.materialSingleLineTextFieldLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.materialSingleLineTextFieldLogin.Depth = 0;
@@ -89,7 +84,6 @@
             // 
             // materialSingleLineTextFieldPassword
             // 
-            this.materialSingleLineTextFieldPassword.AllowDrop = true;
             this.materialSingleLineTextFieldPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.materialSingleLineTextFieldPassword.Depth = 0;
             this.materialSingleLineTextFieldPassword.Hint = "Пароль";

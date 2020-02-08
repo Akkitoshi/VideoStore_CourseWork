@@ -32,10 +32,10 @@
             this.materialSingleLineTextFieldLogin = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextFieldPassword = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextFieldPosition = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextFieldRole = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialComboBoxRole = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialRaisedButtonSignUp = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialLabelRequired = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabelInfo = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // materialSingleLineTextFieldFIO
@@ -106,22 +106,24 @@
             this.materialSingleLineTextFieldPosition.TabIndex = 9;
             this.materialSingleLineTextFieldPosition.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextFieldRole
+            // materialComboBoxRole
             // 
-            this.materialSingleLineTextFieldRole.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.materialSingleLineTextFieldRole.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.materialSingleLineTextFieldRole.Depth = 0;
-            this.materialSingleLineTextFieldRole.Hint = "Роль*";
-            this.materialSingleLineTextFieldRole.Location = new System.Drawing.Point(42, 130);
-            this.materialSingleLineTextFieldRole.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextFieldRole.Name = "materialSingleLineTextFieldRole";
-            this.materialSingleLineTextFieldRole.PasswordChar = '\0';
-            this.materialSingleLineTextFieldRole.SelectedText = "";
-            this.materialSingleLineTextFieldRole.SelectionLength = 0;
-            this.materialSingleLineTextFieldRole.SelectionStart = 0;
-            this.materialSingleLineTextFieldRole.Size = new System.Drawing.Size(239, 23);
-            this.materialSingleLineTextFieldRole.TabIndex = 10;
-            this.materialSingleLineTextFieldRole.UseSystemPasswordChar = false;
+            this.materialComboBoxRole.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
+            this.materialComboBoxRole.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.materialComboBoxRole.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.materialComboBoxRole.Depth = 0;
+            this.materialComboBoxRole.Hint = "Роль*";
+            this.materialComboBoxRole.Location = new System.Drawing.Point(42, 130);
+            this.materialComboBoxRole.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialComboBoxRole.Name = "materialComboBoxRole";
+            this.materialComboBoxRole.PasswordChar = '\0';
+            this.materialComboBoxRole.SelectedText = "";
+            this.materialComboBoxRole.SelectionLength = 0;
+            this.materialComboBoxRole.SelectionStart = 0;
+            this.materialComboBoxRole.Size = new System.Drawing.Size(239, 23);
+            this.materialComboBoxRole.TabIndex = 10;
+            this.materialComboBoxRole.Text = "Продавец-консультант";
+            this.materialComboBoxRole.UseSystemPasswordChar = false;
             // 
             // materialRaisedButtonSignUp
             // 
@@ -134,20 +136,7 @@
             this.materialRaisedButtonSignUp.TabIndex = 11;
             this.materialRaisedButtonSignUp.Text = "ЗАРЕГИСТРИРОВАТЬСЯ";
             this.materialRaisedButtonSignUp.UseVisualStyleBackColor = true;
-            // 
-            // materialLabelRequired
-            // 
-            this.materialLabelRequired.AutoSize = true;
-            this.materialLabelRequired.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabelRequired.Depth = 0;
-            this.materialLabelRequired.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelRequired.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabelRequired.Location = new System.Drawing.Point(54, 288);
-            this.materialLabelRequired.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabelRequired.Name = "materialLabelRequired";
-            this.materialLabelRequired.Size = new System.Drawing.Size(276, 19);
-            this.materialLabelRequired.TabIndex = 12;
-            this.materialLabelRequired.Text = "*обязательные для заполнения поля";
+            this.materialRaisedButtonSignUp.Click += new System.EventHandler(this.materialRaisedButtonSignUp_Click);
             // 
             // materialLabelInfo
             // 
@@ -163,19 +152,36 @@
             this.materialLabelInfo.TabIndex = 13;
             this.materialLabelInfo.Text = "Заполните все обязательные поля";
             // 
+            // materialLabel1
+            // 
+            this.materialLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.materialLabel1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.materialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.Silver;
+            this.materialLabel1.Location = new System.Drawing.Point(42, 288);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(239, 19);
+            this.materialLabel1.TabIndex = 14;
+            this.materialLabel1.Text = "*обязательные для заполнения поля";
+            // 
             // FormSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(336, 316);
+            this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.materialLabelInfo);
-            this.Controls.Add(this.materialLabelRequired);
             this.Controls.Add(this.materialRaisedButtonSignUp);
-            this.Controls.Add(this.materialSingleLineTextFieldRole);
+            this.Controls.Add(this.materialComboBoxRole);
             this.Controls.Add(this.materialSingleLineTextFieldPosition);
             this.Controls.Add(this.materialSingleLineTextFieldPassword);
             this.Controls.Add(this.materialSingleLineTextFieldLogin);
             this.Controls.Add(this.materialSingleLineTextFieldFIO);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormSignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрация";
@@ -190,9 +196,9 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldLogin;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldPassword;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldPosition;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldRole;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialComboBoxRole;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonSignUp;
-        private MaterialSkin.Controls.MaterialLabel materialLabelRequired;
         private MaterialSkin.Controls.MaterialLabel materialLabelInfo;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }

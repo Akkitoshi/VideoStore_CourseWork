@@ -1,6 +1,7 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
+using System.Drawing;
 using Unity;
 using VideoStore_Controller;
 
@@ -28,16 +29,14 @@ namespace VideoStore_View
         {
             if (string.IsNullOrEmpty(materialSingleLineTextFieldLogin.Text))
             {
-                /*MessageBox.Show("Введите логин", "Ошибка", MessageBoxButtons.OK,
-            MessageBoxIcon.Error);*/
-                materialLabelInfo.ForeColor = System.Drawing.Color.Red;
-               // return;
+                materialLabelInfo.ForeColor = Color.Red;
+                materialLabelInfo.Text = "Заполните все поля";
+
             }
             if (string.IsNullOrEmpty(materialSingleLineTextFieldPassword.Text))
             {
-                this.materialSingleLineTextFieldPassword.Text = "Введите пароль";
-                this.materialSingleLineTextFieldPassword.ForeColor = System.Drawing.Color.Red;
-               // return;
+                materialLabelInfo.ForeColor = Color.Red;
+                materialLabelInfo.Text = "Заполните все поля";
             }
             else
             {
@@ -50,9 +49,9 @@ namespace VideoStore_View
                 }
                 else
                 {
-                    this.materialLabelInfo.ForeColor = System.Drawing.Color.Red;
-                    this.materialLabelInfo.Text = "Ошибка";
-                 //   return;
+                    materialLabelInfo.ForeColor = Color.Red;
+                    materialLabelInfo.Text = "Ошибка";
+                    return;
                 }
             }
 
