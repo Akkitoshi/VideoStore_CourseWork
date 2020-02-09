@@ -15,18 +15,12 @@ namespace VideoStore_View
         public int Id { set { id = value; } }
         private int? id;
         private readonly AuthController service;
-        private readonly MaterialSkinManager materialSkinManager;
 
 
         public FormSignUp(AuthController service)
         {
             this.service = service;
             InitializeComponent();
-            // Initialize MaterialSkinManager
-            materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
         }
         private void materialRaisedButtonSignUp_Click(object sender, EventArgs e)
         {

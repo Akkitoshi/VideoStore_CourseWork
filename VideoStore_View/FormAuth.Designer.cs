@@ -103,7 +103,7 @@
             this.materialLabelInfo.BackColor = System.Drawing.Color.Transparent;
             this.materialLabelInfo.Depth = 0;
             this.materialLabelInfo.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelInfo.ForeColor = System.Drawing.Color.Gray;
+            this.materialLabelInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabelInfo.Location = new System.Drawing.Point(84, 74);
             this.materialLabelInfo.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelInfo.Name = "materialLabelInfo";

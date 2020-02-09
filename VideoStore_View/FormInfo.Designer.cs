@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInfo));
             this.materialLabelDescription = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabelAuthor = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // materialLabelDescription
@@ -39,8 +40,8 @@
             this.materialLabelDescription.Depth = 0;
             this.materialLabelDescription.Enabled = false;
             this.materialLabelDescription.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelDescription.ForeColor = System.Drawing.Color.Gray;
-            this.materialLabelDescription.Location = new System.Drawing.Point(12, 79);
+            this.materialLabelDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabelDescription.Location = new System.Drawing.Point(12, 111);
             this.materialLabelDescription.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelDescription.Name = "materialLabelDescription";
             this.materialLabelDescription.Size = new System.Drawing.Size(315, 118);
@@ -55,19 +56,35 @@
             this.materialLabelAuthor.Depth = 0;
             this.materialLabelAuthor.Enabled = false;
             this.materialLabelAuthor.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelAuthor.ForeColor = System.Drawing.Color.Silver;
-            this.materialLabelAuthor.Location = new System.Drawing.Point(12, 292);
+            this.materialLabelAuthor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabelAuthor.Location = new System.Drawing.Point(12, 239);
             this.materialLabelAuthor.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelAuthor.Name = "materialLabelAuthor";
             this.materialLabelAuthor.Size = new System.Drawing.Size(276, 19);
             this.materialLabelAuthor.TabIndex = 1;
             this.materialLabelAuthor.Text = "Автор: Шакина А.Л.  группа ИСЭбд-31";
             // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Enabled = false;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(12, 77);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(306, 19);
+            this.materialLabel1.TabIndex = 2;
+            this.materialLabel1.Text = "Разработка АРМ Продавца-консультанта.";
+            // 
             // FormInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 320);
+            this.ClientSize = new System.Drawing.Size(391, 280);
+            this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.materialLabelAuthor);
             this.Controls.Add(this.materialLabelDescription);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -86,5 +103,6 @@
 
         private MaterialSkin.Controls.MaterialLabel materialLabelDescription;
         private MaterialSkin.Controls.MaterialLabel materialLabelAuthor;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }

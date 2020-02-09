@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace VideoStore_View
 {
-    public partial class FormProduct : MaterialForm
+    public partial class FormClientContract : MaterialForm
     {
-        public FormProduct()
+        public FormClientContract()
         {
             InitializeComponent();
         }

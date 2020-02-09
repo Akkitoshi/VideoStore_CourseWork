@@ -28,12 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.materialRaisedButtonAddproduct = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.SuspendLayout();
+            // 
+            // materialRaisedButtonAddproduct
+            // 
+            this.materialRaisedButtonAddproduct.Depth = 0;
+            this.materialRaisedButtonAddproduct.Location = new System.Drawing.Point(594, 415);
+            this.materialRaisedButtonAddproduct.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonAddproduct.Name = "materialRaisedButtonAddproduct";
+            this.materialRaisedButtonAddproduct.Primary = true;
+            this.materialRaisedButtonAddproduct.Size = new System.Drawing.Size(194, 23);
+            this.materialRaisedButtonAddproduct.TabIndex = 0;
+            this.materialRaisedButtonAddproduct.Text = "Добавить товар";
+            this.materialRaisedButtonAddproduct.UseVisualStyleBackColor = true;
+            // 
+            // FormProducts
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormProducts";
+            this.Controls.Add(this.materialRaisedButtonAddproduct);
+            this.Name = "FormProducts";
+            this.Text = "Товары";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonAddproduct;
     }
 }

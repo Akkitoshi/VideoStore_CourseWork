@@ -121,11 +121,23 @@
     <Compile Include="FormAuth.Designer.cs">
       <DependentUpon>FormAuth.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormClientContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClientContract.Designer.cs">
+      <DependentUpon>FormClientContract.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormClient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormClient.Designer.cs">
       <DependentUpon>FormClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClientContracts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClientContracts.Designer.cs">
+      <DependentUpon>FormClientContracts.cs</DependentUpon>
     </Compile>
     <Compile Include="FormClients.cs">
       <SubType>Form</SubType>
@@ -151,12 +163,6 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormNewClient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormNewClient.Designer.cs">
-      <DependentUpon>FormNewClient.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,12 @@
     </Compile>
     <Compile Include="FormProducts.Designer.cs">
       <DependentUpon>FormProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReport.Designer.cs">
+      <DependentUpon>FormReport.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSignUp.cs">
       <SubType>Form</SubType>
@@ -183,8 +195,14 @@
     <EmbeddedResource Include="FormAuth.resx">
       <DependentUpon>FormAuth.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormClientContract.resx">
+      <DependentUpon>FormClientContract.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormClient.resx">
       <DependentUpon>FormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClientContracts.resx">
+      <DependentUpon>FormClientContracts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormClients.resx">
       <DependentUpon>FormClients.cs</DependentUpon>
@@ -198,8 +216,14 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormNewClient.resx">
-      <DependentUpon>FormNewClient.cs</DependentUpon>
+    <EmbeddedResource Include="FormProduct.resx">
+      <DependentUpon>FormProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProducts.resx">
+      <DependentUpon>FormProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport.resx">
+      <DependentUpon>FormReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSignUp.resx">
       <DependentUpon>FormSignUp.cs</DependentUpon>

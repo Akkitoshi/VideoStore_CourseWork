@@ -11,11 +11,16 @@ using System.Windows.Forms;
 
 namespace VideoStore_View
 {
-    public partial class FormNewClient : MaterialForm
+    public partial class FormReport : MaterialForm
     {
-        public FormNewClient()
+        public FormReport()
         {
             InitializeComponent();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
         }
     }
 }
