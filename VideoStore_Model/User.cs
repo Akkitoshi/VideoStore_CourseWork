@@ -22,5 +22,8 @@ namespace VideoStore_Model
         public string Login { get; set; }
         [DataMember]
         public string Password { get; set; }
+
+        [ForeignKey("UserId")]
+        public virtual List<ClientContract> ClientContracts { get; set; }
     }
 }

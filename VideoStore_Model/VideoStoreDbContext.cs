@@ -17,7 +17,10 @@ namespace VideoStore_Model
             var ensureDLLIsCopied =
            System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
-       
+        public DbSet<ClientCard> ClientCards { get; set; }
+        public DbSet<ClientContract> ClientContracts { set; get; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Service> Services { set; get; }
         public DbSet<User> Users { set; get; }
     }
 }
