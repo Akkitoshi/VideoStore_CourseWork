@@ -28,64 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialSingleLineTextFieldFIO = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextFieldName = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextFieldType = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextFieldPrice = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabelInfo = new MaterialSkin.Controls.MaterialLabel();
             this.materialRaisedButtonAddProduct = new MaterialSkin.Controls.MaterialRaisedButton();
             this.labelRequiredFields = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // materialSingleLineTextFieldFIO
+            // materialSingleLineTextFieldName
             // 
-            this.materialSingleLineTextFieldFIO.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.materialSingleLineTextFieldFIO.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.materialSingleLineTextFieldFIO.Depth = 0;
-            this.materialSingleLineTextFieldFIO.Hint = "Наименование*";
-            this.materialSingleLineTextFieldFIO.Location = new System.Drawing.Point(41, 112);
-            this.materialSingleLineTextFieldFIO.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextFieldFIO.Name = "materialSingleLineTextFieldFIO";
-            this.materialSingleLineTextFieldFIO.PasswordChar = '\0';
-            this.materialSingleLineTextFieldFIO.SelectedText = "";
-            this.materialSingleLineTextFieldFIO.SelectionLength = 0;
-            this.materialSingleLineTextFieldFIO.SelectionStart = 0;
-            this.materialSingleLineTextFieldFIO.Size = new System.Drawing.Size(239, 23);
-            this.materialSingleLineTextFieldFIO.TabIndex = 7;
-            this.materialSingleLineTextFieldFIO.UseSystemPasswordChar = false;
+            this.materialSingleLineTextFieldName.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.materialSingleLineTextFieldName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.materialSingleLineTextFieldName.Depth = 0;
+            this.materialSingleLineTextFieldName.Hint = "Наименование*";
+            this.materialSingleLineTextFieldName.Location = new System.Drawing.Point(41, 112);
+            this.materialSingleLineTextFieldName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextFieldName.Name = "materialSingleLineTextFieldName";
+            this.materialSingleLineTextFieldName.PasswordChar = '\0';
+            this.materialSingleLineTextFieldName.SelectedText = "";
+            this.materialSingleLineTextFieldName.SelectionLength = 0;
+            this.materialSingleLineTextFieldName.SelectionStart = 0;
+            this.materialSingleLineTextFieldName.Size = new System.Drawing.Size(239, 23);
+            this.materialSingleLineTextFieldName.TabIndex = 7;
+            this.materialSingleLineTextFieldName.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField1
+            // materialSingleLineTextFieldType
             // 
-            this.materialSingleLineTextField1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.materialSingleLineTextField1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "Тип*";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(41, 141);
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(239, 23);
-            this.materialSingleLineTextField1.TabIndex = 8;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            this.materialSingleLineTextFieldType.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.materialSingleLineTextFieldType.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.materialSingleLineTextFieldType.Depth = 0;
+            this.materialSingleLineTextFieldType.Hint = "Тип*";
+            this.materialSingleLineTextFieldType.Location = new System.Drawing.Point(41, 141);
+            this.materialSingleLineTextFieldType.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextFieldType.Name = "materialSingleLineTextFieldType";
+            this.materialSingleLineTextFieldType.PasswordChar = '\0';
+            this.materialSingleLineTextFieldType.SelectedText = "";
+            this.materialSingleLineTextFieldType.SelectionLength = 0;
+            this.materialSingleLineTextFieldType.SelectionStart = 0;
+            this.materialSingleLineTextFieldType.Size = new System.Drawing.Size(239, 23);
+            this.materialSingleLineTextFieldType.TabIndex = 8;
+            this.materialSingleLineTextFieldType.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField2
+            // materialSingleLineTextFieldPrice
             // 
-            this.materialSingleLineTextField2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.materialSingleLineTextField2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.Hint = "Цена*";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(41, 170);
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '\0';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(239, 23);
-            this.materialSingleLineTextField2.TabIndex = 9;
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            this.materialSingleLineTextFieldPrice.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.materialSingleLineTextFieldPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.materialSingleLineTextFieldPrice.Depth = 0;
+            this.materialSingleLineTextFieldPrice.Hint = "Цена*";
+            this.materialSingleLineTextFieldPrice.Location = new System.Drawing.Point(41, 170);
+            this.materialSingleLineTextFieldPrice.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextFieldPrice.Name = "materialSingleLineTextFieldPrice";
+            this.materialSingleLineTextFieldPrice.PasswordChar = '\0';
+            this.materialSingleLineTextFieldPrice.SelectedText = "";
+            this.materialSingleLineTextFieldPrice.SelectionLength = 0;
+            this.materialSingleLineTextFieldPrice.SelectionStart = 0;
+            this.materialSingleLineTextFieldPrice.Size = new System.Drawing.Size(239, 23);
+            this.materialSingleLineTextFieldPrice.TabIndex = 9;
+            this.materialSingleLineTextFieldPrice.UseSystemPasswordChar = false;
             // 
             // materialLabelInfo
             // 
@@ -112,6 +112,7 @@
             this.materialRaisedButtonAddProduct.TabIndex = 15;
             this.materialRaisedButtonAddProduct.Text = "Добавить";
             this.materialRaisedButtonAddProduct.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonAddProduct.Click += new System.EventHandler(this.materialRaisedButtonAddProduct_Click);
             // 
             // labelRequiredFields
             // 
@@ -133,10 +134,14 @@
             this.Controls.Add(this.labelRequiredFields);
             this.Controls.Add(this.materialRaisedButtonAddProduct);
             this.Controls.Add(this.materialLabelInfo);
-            this.Controls.Add(this.materialSingleLineTextField2);
-            this.Controls.Add(this.materialSingleLineTextField1);
-            this.Controls.Add(this.materialSingleLineTextFieldFIO);
+            this.Controls.Add(this.materialSingleLineTextFieldPrice);
+            this.Controls.Add(this.materialSingleLineTextFieldType);
+            this.Controls.Add(this.materialSingleLineTextFieldName);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormProduct";
+            this.Sizable = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Товар";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -145,9 +150,9 @@
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldFIO;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldName;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldType;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldPrice;
         private MaterialSkin.Controls.MaterialLabel materialLabelInfo;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonAddProduct;
         private System.Windows.Forms.Label labelRequiredFields;

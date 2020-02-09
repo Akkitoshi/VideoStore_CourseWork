@@ -9,7 +9,7 @@ namespace VideoStore_Model.ViewModels
         public string FIO { get; set; }
         [DisplayName("Номер паспорта")]
         public string PassportNumber { get; set; }
-        [DisplayName("пени")]
+        [DisplayName("Пени")]
         public int Penalties { get; set; }
         [DisplayName("Обращение")]
         public int Frequency { get; set; }

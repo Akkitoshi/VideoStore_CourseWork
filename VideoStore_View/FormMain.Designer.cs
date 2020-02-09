@@ -29,119 +29,125 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton4 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButtonClients = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButtonReports = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButtonDiagramm = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButtonContracts = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButtonArch = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButtonInfo = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButtonProducts = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
             // 
-            // materialRaisedButton1
+            // materialRaisedButtonClients
             // 
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(36, 82);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(264, 23);
-            this.materialRaisedButton1.TabIndex = 0;
-            this.materialRaisedButton1.Text = "КЛИЕНТЫ";
-            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonClients.Depth = 0;
+            this.materialRaisedButtonClients.Location = new System.Drawing.Point(36, 82);
+            this.materialRaisedButtonClients.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonClients.Name = "materialRaisedButtonClients";
+            this.materialRaisedButtonClients.Primary = true;
+            this.materialRaisedButtonClients.Size = new System.Drawing.Size(264, 23);
+            this.materialRaisedButtonClients.TabIndex = 0;
+            this.materialRaisedButtonClients.Text = "КЛИЕНТЫ";
+            this.materialRaisedButtonClients.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonClients.Click += new System.EventHandler(this.materialRaisedButtonClients_Click);
             // 
-            // materialRaisedButton2
+            // materialRaisedButtonReports
             // 
-            this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(36, 198);
-            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton2.Name = "materialRaisedButton2";
-            this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(264, 23);
-            this.materialRaisedButton2.TabIndex = 1;
-            this.materialRaisedButton2.Text = "ОТЧЕТЫ";
-            this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonReports.Depth = 0;
+            this.materialRaisedButtonReports.Location = new System.Drawing.Point(36, 198);
+            this.materialRaisedButtonReports.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonReports.Name = "materialRaisedButtonReports";
+            this.materialRaisedButtonReports.Primary = true;
+            this.materialRaisedButtonReports.Size = new System.Drawing.Size(264, 23);
+            this.materialRaisedButtonReports.TabIndex = 1;
+            this.materialRaisedButtonReports.Text = "ОТЧЕТЫ";
+            this.materialRaisedButtonReports.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonReports.Click += new System.EventHandler(this.materialRaisedButtonReports_Click);
             // 
-            // materialRaisedButton3
+            // materialRaisedButtonDiagramm
             // 
-            this.materialRaisedButton3.Depth = 0;
-            this.materialRaisedButton3.Location = new System.Drawing.Point(36, 169);
-            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton3.Name = "materialRaisedButton3";
-            this.materialRaisedButton3.Primary = true;
-            this.materialRaisedButton3.Size = new System.Drawing.Size(264, 23);
-            this.materialRaisedButton3.TabIndex = 2;
-            this.materialRaisedButton3.Text = "ДИАГРАММА";
-            this.materialRaisedButton3.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonDiagramm.Depth = 0;
+            this.materialRaisedButtonDiagramm.Location = new System.Drawing.Point(36, 169);
+            this.materialRaisedButtonDiagramm.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonDiagramm.Name = "materialRaisedButtonDiagramm";
+            this.materialRaisedButtonDiagramm.Primary = true;
+            this.materialRaisedButtonDiagramm.Size = new System.Drawing.Size(264, 23);
+            this.materialRaisedButtonDiagramm.TabIndex = 2;
+            this.materialRaisedButtonDiagramm.Text = "ДИАГРАММА";
+            this.materialRaisedButtonDiagramm.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonDiagramm.Click += new System.EventHandler(this.materialRaisedButtonDiagramm_Click);
             // 
-            // materialRaisedButton4
+            // materialRaisedButtonContracts
             // 
-            this.materialRaisedButton4.Depth = 0;
-            this.materialRaisedButton4.Location = new System.Drawing.Point(36, 111);
-            this.materialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton4.Name = "materialRaisedButton4";
-            this.materialRaisedButton4.Primary = true;
-            this.materialRaisedButton4.Size = new System.Drawing.Size(264, 23);
-            this.materialRaisedButton4.TabIndex = 3;
-            this.materialRaisedButton4.Text = "Договора";
-            this.materialRaisedButton4.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonContracts.Depth = 0;
+            this.materialRaisedButtonContracts.Location = new System.Drawing.Point(36, 111);
+            this.materialRaisedButtonContracts.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonContracts.Name = "materialRaisedButtonContracts";
+            this.materialRaisedButtonContracts.Primary = true;
+            this.materialRaisedButtonContracts.Size = new System.Drawing.Size(264, 23);
+            this.materialRaisedButtonContracts.TabIndex = 3;
+            this.materialRaisedButtonContracts.Text = "Договора";
+            this.materialRaisedButtonContracts.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonContracts.Click += new System.EventHandler(this.materialRaisedButtonContracts_Click);
             // 
-            // materialRaisedButton5
+            // materialRaisedButtonArch
             // 
-            this.materialRaisedButton5.Depth = 0;
-            this.materialRaisedButton5.Location = new System.Drawing.Point(36, 227);
-            this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton5.Name = "materialRaisedButton5";
-            this.materialRaisedButton5.Primary = true;
-            this.materialRaisedButton5.Size = new System.Drawing.Size(264, 23);
-            this.materialRaisedButton5.TabIndex = 4;
-            this.materialRaisedButton5.Text = "АРХИВАЦИЯ";
-            this.materialRaisedButton5.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonArch.Depth = 0;
+            this.materialRaisedButtonArch.Location = new System.Drawing.Point(36, 227);
+            this.materialRaisedButtonArch.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonArch.Name = "materialRaisedButtonArch";
+            this.materialRaisedButtonArch.Primary = true;
+            this.materialRaisedButtonArch.Size = new System.Drawing.Size(264, 23);
+            this.materialRaisedButtonArch.TabIndex = 4;
+            this.materialRaisedButtonArch.Text = "АРХИВАЦИЯ";
+            this.materialRaisedButtonArch.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonArch.Click += new System.EventHandler(this.materialRaisedButtonArch_Click);
             // 
-            // materialRaisedButton6
+            // materialRaisedButtonInfo
             // 
-            this.materialRaisedButton6.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.materialRaisedButton6.Cursor = System.Windows.Forms.Cursors.Help;
-            this.materialRaisedButton6.Depth = 0;
-            this.materialRaisedButton6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.materialRaisedButton6.Location = new System.Drawing.Point(36, 269);
-            this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton6.Name = "materialRaisedButton6";
-            this.materialRaisedButton6.Primary = true;
-            this.materialRaisedButton6.Size = new System.Drawing.Size(264, 41);
-            this.materialRaisedButton6.TabIndex = 5;
-            this.materialRaisedButton6.Tag = "errrtete";
-            this.materialRaisedButton6.Text = " сведения об авторе и назначении программы";
-            this.materialRaisedButton6.UseVisualStyleBackColor = false;
-            this.materialRaisedButton6.Click += new System.EventHandler(this.materialRaisedButton6_Click);
+            this.materialRaisedButtonInfo.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.materialRaisedButtonInfo.Cursor = System.Windows.Forms.Cursors.Help;
+            this.materialRaisedButtonInfo.Depth = 0;
+            this.materialRaisedButtonInfo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.materialRaisedButtonInfo.Location = new System.Drawing.Point(36, 269);
+            this.materialRaisedButtonInfo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonInfo.Name = "materialRaisedButtonInfo";
+            this.materialRaisedButtonInfo.Primary = true;
+            this.materialRaisedButtonInfo.Size = new System.Drawing.Size(264, 41);
+            this.materialRaisedButtonInfo.TabIndex = 5;
+            this.materialRaisedButtonInfo.Tag = "errrtete";
+            this.materialRaisedButtonInfo.Text = " сведения об авторе и назначении программы";
+            this.materialRaisedButtonInfo.UseVisualStyleBackColor = false;
+            this.materialRaisedButtonInfo.Click += new System.EventHandler(this.materialRaisedButtonInfo_Click);
             // 
-            // materialRaisedButton7
+            // materialRaisedButtonProducts
             // 
-            this.materialRaisedButton7.Depth = 0;
-            this.materialRaisedButton7.Location = new System.Drawing.Point(36, 140);
-            this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton7.Name = "materialRaisedButton7";
-            this.materialRaisedButton7.Primary = true;
-            this.materialRaisedButton7.Size = new System.Drawing.Size(264, 23);
-            this.materialRaisedButton7.TabIndex = 6;
-            this.materialRaisedButton7.Text = "Товары";
-            this.materialRaisedButton7.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonProducts.Depth = 0;
+            this.materialRaisedButtonProducts.Location = new System.Drawing.Point(36, 140);
+            this.materialRaisedButtonProducts.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonProducts.Name = "materialRaisedButtonProducts";
+            this.materialRaisedButtonProducts.Primary = true;
+            this.materialRaisedButtonProducts.Size = new System.Drawing.Size(264, 23);
+            this.materialRaisedButtonProducts.TabIndex = 6;
+            this.materialRaisedButtonProducts.Text = "Товары";
+            this.materialRaisedButtonProducts.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonProducts.Click += new System.EventHandler(this.materialRaisedButtonProducts_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.ForestGreen;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(339, 322);
-            this.Controls.Add(this.materialRaisedButton7);
-            this.Controls.Add(this.materialRaisedButton6);
-            this.Controls.Add(this.materialRaisedButton5);
-            this.Controls.Add(this.materialRaisedButton4);
-            this.Controls.Add(this.materialRaisedButton3);
-            this.Controls.Add(this.materialRaisedButton2);
-            this.Controls.Add(this.materialRaisedButton1);
+            this.Controls.Add(this.materialRaisedButtonProducts);
+            this.Controls.Add(this.materialRaisedButtonInfo);
+            this.Controls.Add(this.materialRaisedButtonArch);
+            this.Controls.Add(this.materialRaisedButtonContracts);
+            this.Controls.Add(this.materialRaisedButtonDiagramm);
+            this.Controls.Add(this.materialRaisedButtonReports);
+            this.Controls.Add(this.materialRaisedButtonClients);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -149,19 +155,18 @@
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Видеопрокат";
-            this.TransparencyKey = System.Drawing.Color.Transparent;
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton4;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton5;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton6;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton7;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonClients;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonReports;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonDiagramm;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonContracts;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonArch;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonInfo;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonProducts;
     }
 }

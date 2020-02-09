@@ -59,6 +59,7 @@
             this.materialRaisedButtonAddClient.TabIndex = 21;
             this.materialRaisedButtonAddClient.Text = "Добавить";
             this.materialRaisedButtonAddClient.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonAddClient.Click += new System.EventHandler(this.materialRaisedButtonAddClient_Click);
             // 
             // materialLabelInfo
             // 

@@ -75,7 +75,7 @@
             this.materialSingleLineTextFieldYear.SelectedText = "";
             this.materialSingleLineTextFieldYear.SelectionLength = 0;
             this.materialSingleLineTextFieldYear.SelectionStart = 0;
-            this.materialSingleLineTextFieldYear.Size = new System.Drawing.Size(76, 23);
+            this.materialSingleLineTextFieldYear.Size = new System.Drawing.Size(92, 23);
             this.materialSingleLineTextFieldYear.TabIndex = 2;
             this.materialSingleLineTextFieldYear.UseSystemPasswordChar = false;
             // 
@@ -118,6 +118,8 @@
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormReport";
+            this.Sizable = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cтоимость заключенных договоров по видам услуг и месяцам года";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

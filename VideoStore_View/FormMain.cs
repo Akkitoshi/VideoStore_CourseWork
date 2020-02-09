@@ -23,9 +23,45 @@ namespace VideoStore_View
             InitializeComponent();
         }
 
-        private void materialRaisedButton6_Click(object sender, EventArgs e)
+        private void materialRaisedButtonInfo_Click(object sender, EventArgs e)
         {
             var form1 = Container.Resolve<FormInfo>();
+            form1.ShowDialog();
+        }
+
+        private void materialRaisedButtonProducts_Click(object sender, EventArgs e)
+        {
+            var form1 = Container.Resolve<FormProducts>();
+            form1.ShowDialog();
+        }
+
+        private void materialRaisedButtonClients_Click(object sender, EventArgs e)
+        {
+            var form1 = Container.Resolve<FormClients>();
+            form1.ShowDialog();
+        }
+
+        private void materialRaisedButtonContracts_Click(object sender, EventArgs e)
+        {
+            var form1 = Container.Resolve<FormClientContracts>();
+            form1.ShowDialog();
+        }
+
+        private void materialRaisedButtonDiagramm_Click(object sender, EventArgs e)
+        {
+            var form1 = Container.Resolve<FormDiagramm>();
+            form1.ShowDialog();
+        }
+
+        private void materialRaisedButtonReports_Click(object sender, EventArgs e)
+        {
+            var form1 = Container.Resolve<FormReport>();
+            form1.ShowDialog();
+        }
+
+        private void materialRaisedButtonArch_Click(object sender, EventArgs e)
+        {
+            var form1 = Container.Resolve<FormArchieve>();
             form1.ShowDialog();
         }
     }

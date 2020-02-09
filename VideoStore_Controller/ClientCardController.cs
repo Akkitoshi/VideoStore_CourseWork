@@ -61,6 +61,20 @@ namespace VideoStore_Controller
                 }
             }
         }
+
+        //обновление данных о пени
+        public void UpdElement(ClientCard model)
+        {
+            ClientCard element = context.ClientCards.FirstOrDefault(rec => rec.FIO ==
+          model.FIO);
+            if (element == null)
+            {
+                throw new Exception("Элемент не найден");
+            }
+            element.Penalties = model.Penalties + 100;
+            context.SaveChanges();
+        }
+
         //поиск клиента по номеру паспорта 
         public List<ClientCardViewModel> getByPassportNumber(string numberOfPassport)
         {
@@ -92,10 +106,11 @@ namespace VideoStore_Controller
               .ToList();
             return result;
         }
-        //выборка данных клиентов с начисленными пени
+        //выборка данных клиентов пени
+
         public List<ClientCardViewModel> getClientWithPenalties()
         {
-            List<ClientCardViewModel> result = context.ClientCards.Where(rec => rec.Penalties > 0).Select(rec => new
+            List<ClientCardViewModel> result = context.ClientCards.Where(rec => rec.Penalties == 0).Select(rec => new
              ClientCardViewModel
             {
                 Id = rec.Id,
@@ -107,10 +122,10 @@ namespace VideoStore_Controller
               .ToList();
             return result;
         }
-        //выборка данных клиентов без начисленных пени
+        //выборка данных клиентов  пени
         public List<ClientCardViewModel> getClientWithoutPenalties()
         {
-            List<ClientCardViewModel> result = context.ClientCards.Where(rec => rec.Penalties == 0).Select(rec => new
+            List<ClientCardViewModel> result = context.ClientCards.Where(rec => rec.Penalties != 0).Select(rec => new
              ClientCardViewModel
             {
                 Id = rec.Id,
@@ -126,7 +141,7 @@ namespace VideoStore_Controller
         //выборка данных клиентов с сортировкой по количеству обращений
         public List<ClientCardViewModel> getClientFrequency()
         {
-            List<ClientCardViewModel> result = context.ClientCards.Where(rec => rec.Frequency > 10).Select(rec => new
+            List<ClientCardViewModel> result = context.ClientCards.Select(rec => new
              ClientCardViewModel
             {
                 Id = rec.Id,

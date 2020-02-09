@@ -44,10 +44,9 @@
             this.materialLabelDescription.Location = new System.Drawing.Point(12, 111);
             this.materialLabelDescription.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelDescription.Name = "materialLabelDescription";
-            this.materialLabelDescription.Size = new System.Drawing.Size(315, 118);
+            this.materialLabelDescription.Size = new System.Drawing.Size(315, 55);
             this.materialLabelDescription.TabIndex = 0;
-            this.materialLabelDescription.Text = "Фирма видео-проката оказывает услуги физическим лицами. В процессе оказания услуг" +
-    " заключается договор,рассчитываются затраты, выставляется счет.";
+            this.materialLabelDescription.Text = "Фирма видео-проката оказывает услуги физическим лицами.";
             // 
             // materialLabelAuthor
             // 
@@ -57,7 +56,7 @@
             this.materialLabelAuthor.Enabled = false;
             this.materialLabelAuthor.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabelAuthor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabelAuthor.Location = new System.Drawing.Point(12, 239);
+            this.materialLabelAuthor.Location = new System.Drawing.Point(12, 166);
             this.materialLabelAuthor.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelAuthor.Name = "materialLabelAuthor";
             this.materialLabelAuthor.Size = new System.Drawing.Size(276, 19);
@@ -83,7 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 280);
+            this.ClientSize = new System.Drawing.Size(391, 202);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.materialLabelAuthor);
             this.Controls.Add(this.materialLabelDescription);

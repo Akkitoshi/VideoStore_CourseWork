@@ -238,7 +238,7 @@
             this.Name = "FormClientContract";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Контракт";
+            this.Text = "Договор";
             this.ResumeLayout(false);
             this.PerformLayout();
 
