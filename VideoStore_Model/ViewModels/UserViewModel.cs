@@ -4,6 +4,7 @@ namespace VideoStore_Model.ViewModels
 {
     public class UserViewModel
     {
+        [DisplayName("Идентификатор продавца")]
         public int Id { get; set; }
         [DisplayName("ФИО")]
         public string FIO { get; set; }

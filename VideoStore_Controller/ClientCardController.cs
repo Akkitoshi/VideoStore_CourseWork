@@ -65,14 +65,25 @@ namespace VideoStore_Controller
         //обновление данных о пени
         public void UpdElement(ClientCard model)
         {
-            ClientCard element = context.ClientCards.FirstOrDefault(rec => rec.FIO ==
-          model.FIO);
-            if (element == null)
+            using (var transaction = context.Database.BeginTransaction())
             {
-                throw new Exception("Элемент не найден");
+                try
+                {
+                    ClientCard element = context.ClientCards.FirstOrDefault(rec => rec.FIO ==
+              model.FIO);
+                    if (element == null)
+                    {
+                        throw new Exception("Элемент не найден");
+                    }
+                    element.Penalties = model.Penalties;
+                    context.SaveChanges();
+                }
+                catch (Exception)
+                {
+                    transaction.Rollback();
+                    throw;
+                }
             }
-            element.Penalties = model.Penalties + 100;
-            context.SaveChanges();
         }
 
         //поиск клиента по номеру паспорта 

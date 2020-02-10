@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientContract));
             this.labelRequiredFields = new System.Windows.Forms.Label();
-            this.materialRaisedButtonAddProduct = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButtonAddContract = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialLabelInfo = new MaterialSkin.Controls.MaterialLabel();
             this.materialSingleLineTextFieldService = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextFieldUser = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -54,17 +54,18 @@
             this.labelRequiredFields.TabIndex = 28;
             this.labelRequiredFields.Text = "*обязательные для заполнения поля";
             // 
-            // materialRaisedButtonAddProduct
+            // materialRaisedButtonAddContract
             // 
-            this.materialRaisedButtonAddProduct.Depth = 0;
-            this.materialRaisedButtonAddProduct.Location = new System.Drawing.Point(65, 345);
-            this.materialRaisedButtonAddProduct.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButtonAddProduct.Name = "materialRaisedButtonAddProduct";
-            this.materialRaisedButtonAddProduct.Primary = true;
-            this.materialRaisedButtonAddProduct.Size = new System.Drawing.Size(204, 23);
-            this.materialRaisedButtonAddProduct.TabIndex = 27;
-            this.materialRaisedButtonAddProduct.Text = "Добавить";
-            this.materialRaisedButtonAddProduct.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonAddContract.Depth = 0;
+            this.materialRaisedButtonAddContract.Location = new System.Drawing.Point(65, 345);
+            this.materialRaisedButtonAddContract.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonAddContract.Name = "materialRaisedButtonAddContract";
+            this.materialRaisedButtonAddContract.Primary = true;
+            this.materialRaisedButtonAddContract.Size = new System.Drawing.Size(204, 23);
+            this.materialRaisedButtonAddContract.TabIndex = 27;
+            this.materialRaisedButtonAddContract.Text = "Добавить";
+            this.materialRaisedButtonAddContract.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonAddContract.Click += new System.EventHandler(this.materialRaisedButtonAddContract_Click);
             // 
             // materialLabelInfo
             // 
@@ -227,7 +228,7 @@
             this.Controls.Add(this.materialSingleLineTextFieldAmount);
             this.Controls.Add(this.materialSingleLineTextFieldProduct);
             this.Controls.Add(this.labelRequiredFields);
-            this.Controls.Add(this.materialRaisedButtonAddProduct);
+            this.Controls.Add(this.materialRaisedButtonAddContract);
             this.Controls.Add(this.materialLabelInfo);
             this.Controls.Add(this.materialSingleLineTextFieldService);
             this.Controls.Add(this.materialSingleLineTextFieldUser);
@@ -247,7 +248,7 @@
         #endregion
 
         private System.Windows.Forms.Label labelRequiredFields;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonAddProduct;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonAddContract;
         private MaterialSkin.Controls.MaterialLabel materialLabelInfo;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldService;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldUser;

@@ -111,6 +111,8 @@
     <Compile Include="EncryptionController.cs" />
     <Compile Include="ProductsController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceController.cs" />
+    <Compile Include="UsersController.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

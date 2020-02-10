@@ -31,9 +31,17 @@ namespace VideoStore_View
             var currentContainer = new UnityContainer();
             currentContainer.RegisterType<DbContext, VideoStoreDbContext>(new
            HierarchicalLifetimeManager());
-            /*currentContainer.RegisterType<PatientCardController>(new
-           HierarchicalLifetimeManager());*/
+            currentContainer.RegisterType<ClientCardController>(new
+           HierarchicalLifetimeManager());
             currentContainer.RegisterType<AuthController>(new
+           HierarchicalLifetimeManager());
+            currentContainer.RegisterType<ClientContractController>(new
+           HierarchicalLifetimeManager());
+            currentContainer.RegisterType<ProductsController>(new
+           HierarchicalLifetimeManager());
+            currentContainer.RegisterType<ArchieveController>(new
+           HierarchicalLifetimeManager());
+            currentContainer.RegisterType<EncryptionController>(new
            HierarchicalLifetimeManager());
 
             return currentContainer;

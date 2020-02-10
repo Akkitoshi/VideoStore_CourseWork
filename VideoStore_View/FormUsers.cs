@@ -1,41 +1,46 @@
 ﻿using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Unity;
-using VideoStore_Controller;
+using VideoStore_CourseWork;
 using VideoStore_Model.ViewModels;
 
 namespace VideoStore_View
 {
-    public partial class FormProducts : MaterialForm
+    public partial class FormUsers : MaterialForm
     {
         [Dependency]
         public new IUnityContainer Container { get; set; }
-        private readonly ProductsController service;
+        private readonly UsersController service;
 
-        public FormProducts(ProductsController service)
+        public FormUsers(UsersController service)
         {
             InitializeComponent();
             this.service = service;
         }
-
-        private void FormProducts_Load(object sender, EventArgs e)
+        private void FormUsers_Load(object sender, EventArgs e)
         {
             LoadData();
         }
-
         private void LoadData()
         {
             try
             {
-                List<ProductViewModel> list = service.GetList();
+                List<UserViewModel> list = service.GetList();
                 if (list != null)
                 {
                     dataGridView1.DataSource = list;
                     dataGridView1.Columns[0].Visible = true;
                     dataGridView1.Columns[1].Visible = true;
                     dataGridView1.Columns[2].Visible = true;
+                    dataGridView1.Columns[3].Visible = true;
                     dataGridView1.Columns[1].AutoSizeMode =
                         DataGridViewAutoSizeColumnMode.Fill;
                 }
@@ -44,15 +49,6 @@ namespace VideoStore_View
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
-            }
-        }
-
-        private void materialRaisedButtonAddProduct_Click(object sender, EventArgs e)
-        {
-            var form = Container.Resolve<FormProduct>();
-            if (form.ShowDialog() == DialogResult.OK)
-            {
-                LoadData();
             }
         }
     }

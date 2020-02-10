@@ -1,12 +1,7 @@
 ﻿using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Unity;
 using VideoStore_Controller;
@@ -19,11 +14,11 @@ namespace VideoStore_View
     {
         [Dependency]
         public new IUnityContainer Container { get; set; }
-        private readonly ClientConractController service;
+        private readonly ClientContractController service;
         private readonly ClientCardController service2;
         public string emptyNumber = "";
 
-        public FormClientContracts(ClientConractController service, ClientCardController service2)
+        public FormClientContracts(ClientContractController service, ClientCardController service2)
         {
             InitializeComponent();
             this.service = service;
@@ -45,7 +40,7 @@ namespace VideoStore_View
                 if (list != null)
                 {
                     dataGridView1.DataSource = list;
-                    dataGridView1.Columns[0].Visible = false;
+                    dataGridView1.Columns[0].Visible = true;
                     dataGridView1.Columns[1].Visible = true;
                     dataGridView1.Columns[2].Visible = true;
                     dataGridView1.Columns[3].Visible = true;
@@ -79,7 +74,6 @@ namespace VideoStore_View
                 });
                 materialLabelError.ForeColor = Color.Green;
                 materialLabelError.Text = "Добавление прошло успешно";
-                LoadData();
             }
             catch
             {
@@ -98,7 +92,7 @@ namespace VideoStore_View
                     if (list != null)
                     {
                         dataGridView1.DataSource = list;
-                        dataGridView1.Columns[0].Visible = false;
+                        dataGridView1.Columns[0].Visible = true;
                         dataGridView1.Columns[1].Visible = true;
                         dataGridView1.Columns[2].Visible = true;
                         dataGridView1.Columns[3].Visible = true;
@@ -135,7 +129,7 @@ namespace VideoStore_View
                     if (list != null)
                     {
                         dataGridView1.DataSource = list;
-                        dataGridView1.Columns[0].Visible = false;
+                        dataGridView1.Columns[0].Visible = true;
                         dataGridView1.Columns[1].Visible = true;
                         dataGridView1.Columns[2].Visible = true;
                         dataGridView1.Columns[3].Visible = true;
@@ -176,7 +170,7 @@ namespace VideoStore_View
                 if (list != null)
                 {
                     dataGridView1.DataSource = list;
-                    dataGridView1.Columns[0].Visible = false;
+                    dataGridView1.Columns[0].Visible = true;
                     dataGridView1.Columns[1].Visible = true;
                     dataGridView1.Columns[2].Visible = true;
                     dataGridView1.Columns[3].Visible = true;
@@ -204,7 +198,7 @@ namespace VideoStore_View
                 if (list != null)
                 {
                     dataGridView1.DataSource = list;
-                    dataGridView1.Columns[0].Visible = false;
+                    dataGridView1.Columns[0].Visible = true;
                     dataGridView1.Columns[1].Visible = true;
                     dataGridView1.Columns[2].Visible = true;
                     dataGridView1.Columns[3].Visible = true;
@@ -236,19 +230,6 @@ namespace VideoStore_View
             {
                 LoadData();
             }
-        }
-
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //выбрана строка CurrentRow
-            int CurrentRow = dataGridView1.SelectedCells[0].RowIndex;
-            //получить значение Name выбранной строки
-            string FIO = dataGridView1[1, CurrentRow].Value.ToString();
-            materialSingleLineTextFieldFIO.Text = FIO;
-            string Number = dataGridView1[3, CurrentRow].Value.ToString();
-            materialSingleLineTextFieldContractNumber.Text = Number;
-            materialLabelError.ForeColor = Color.White;
         }
 
     }

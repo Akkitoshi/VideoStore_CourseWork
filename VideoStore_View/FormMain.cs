@@ -64,5 +64,18 @@ namespace VideoStore_View
             var form1 = Container.Resolve<FormArchieve>();
             form1.ShowDialog();
         }
+
+        private void materialRaisedButtonServices_Click(object sender, EventArgs e)
+        {
+
+            var form1 = Container.Resolve<FormServices>();
+            form1.ShowDialog();
+        }
+
+        private void materialRaisedButtonUsers_Click(object sender, EventArgs e)
+        {
+            var form1 = Container.Resolve<FormUsers>();
+            form1.ShowDialog();
+        }
     }
 }

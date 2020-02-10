@@ -4,6 +4,7 @@ namespace VideoStore_Model.ViewModels
 {
     public class ClientCardViewModel
     {
+        [DisplayName("Идентификатор пользователя")]
         public int Id { get; set; }
         [DisplayName("ФИО")]
         public string FIO { get; set; }

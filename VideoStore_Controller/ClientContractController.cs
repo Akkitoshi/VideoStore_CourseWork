@@ -6,11 +6,11 @@ using VideoStore_Model.ViewModels;
 
 namespace VideoStore_Controller
 {
-    public class ClientConractController
+    public class ClientContractController
     {
         private VideoStoreDbContext context;
 
-        public ClientConractController(VideoStoreDbContext context)
+        public ClientContractController(VideoStoreDbContext context)
         {
             this.context = context;
         }

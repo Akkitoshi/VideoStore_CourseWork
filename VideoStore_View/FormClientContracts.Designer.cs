@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientContracts));
             this.materialRaisedButtonActive = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonNoActive = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -50,7 +52,7 @@
             // materialRaisedButtonActive
             // 
             this.materialRaisedButtonActive.Depth = 0;
-            this.materialRaisedButtonActive.Location = new System.Drawing.Point(591, 330);
+            this.materialRaisedButtonActive.Location = new System.Drawing.Point(875, 330);
             this.materialRaisedButtonActive.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonActive.Name = "materialRaisedButtonActive";
             this.materialRaisedButtonActive.Primary = true;
@@ -63,7 +65,7 @@
             // materialRaisedButtonNoActive
             // 
             this.materialRaisedButtonNoActive.Depth = 0;
-            this.materialRaisedButtonNoActive.Location = new System.Drawing.Point(591, 359);
+            this.materialRaisedButtonNoActive.Location = new System.Drawing.Point(875, 359);
             this.materialRaisedButtonNoActive.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonNoActive.Name = "materialRaisedButtonNoActive";
             this.materialRaisedButtonNoActive.Primary = true;
@@ -146,7 +148,7 @@
             // materialRaisedButtonCancel
             // 
             this.materialRaisedButtonCancel.Depth = 0;
-            this.materialRaisedButtonCancel.Location = new System.Drawing.Point(749, 389);
+            this.materialRaisedButtonCancel.Location = new System.Drawing.Point(1033, 389);
             this.materialRaisedButtonCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonCancel.Name = "materialRaisedButtonCancel";
             this.materialRaisedButtonCancel.Primary = true;
@@ -159,7 +161,7 @@
             // materialRaisedButtonUpd
             // 
             this.materialRaisedButtonUpd.Depth = 0;
-            this.materialRaisedButtonUpd.Location = new System.Drawing.Point(659, 389);
+            this.materialRaisedButtonUpd.Location = new System.Drawing.Point(943, 389);
             this.materialRaisedButtonUpd.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonUpd.Name = "materialRaisedButtonUpd";
             this.materialRaisedButtonUpd.Primary = true;
@@ -172,7 +174,7 @@
             // materialRaisedButtonAddContract
             // 
             this.materialRaisedButtonAddContract.Depth = 0;
-            this.materialRaisedButtonAddContract.Location = new System.Drawing.Point(591, 443);
+            this.materialRaisedButtonAddContract.Location = new System.Drawing.Point(875, 443);
             this.materialRaisedButtonAddContract.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonAddContract.Name = "materialRaisedButtonAddContract";
             this.materialRaisedButtonAddContract.Primary = true;
@@ -245,10 +247,24 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Enabled = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.dataGridView1.Location = new System.Drawing.Point(9, 77);
@@ -257,14 +273,14 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(892, 221);
+            this.dataGridView1.Size = new System.Drawing.Size(1176, 221);
             this.dataGridView1.TabIndex = 27;
             // 
             // FormClientContracts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 493);
+            this.ClientSize = new System.Drawing.Size(1197, 493);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.materialSingleLineTextFieldPinalties);
             this.Controls.Add(this.materialLabelError);

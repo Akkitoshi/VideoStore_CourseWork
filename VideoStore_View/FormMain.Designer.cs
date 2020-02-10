@@ -36,6 +36,8 @@
             this.materialRaisedButtonArch = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonInfo = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonProducts = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButtonUsers = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButtonServices = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
             // 
             // materialRaisedButtonClients
@@ -54,7 +56,7 @@
             // materialRaisedButtonReports
             // 
             this.materialRaisedButtonReports.Depth = 0;
-            this.materialRaisedButtonReports.Location = new System.Drawing.Point(36, 198);
+            this.materialRaisedButtonReports.Location = new System.Drawing.Point(36, 256);
             this.materialRaisedButtonReports.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonReports.Name = "materialRaisedButtonReports";
             this.materialRaisedButtonReports.Primary = true;
@@ -67,7 +69,7 @@
             // materialRaisedButtonDiagramm
             // 
             this.materialRaisedButtonDiagramm.Depth = 0;
-            this.materialRaisedButtonDiagramm.Location = new System.Drawing.Point(36, 169);
+            this.materialRaisedButtonDiagramm.Location = new System.Drawing.Point(36, 227);
             this.materialRaisedButtonDiagramm.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonDiagramm.Name = "materialRaisedButtonDiagramm";
             this.materialRaisedButtonDiagramm.Primary = true;
@@ -93,7 +95,7 @@
             // materialRaisedButtonArch
             // 
             this.materialRaisedButtonArch.Depth = 0;
-            this.materialRaisedButtonArch.Location = new System.Drawing.Point(36, 227);
+            this.materialRaisedButtonArch.Location = new System.Drawing.Point(36, 285);
             this.materialRaisedButtonArch.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonArch.Name = "materialRaisedButtonArch";
             this.materialRaisedButtonArch.Primary = true;
@@ -109,7 +111,7 @@
             this.materialRaisedButtonInfo.Cursor = System.Windows.Forms.Cursors.Help;
             this.materialRaisedButtonInfo.Depth = 0;
             this.materialRaisedButtonInfo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.materialRaisedButtonInfo.Location = new System.Drawing.Point(36, 269);
+            this.materialRaisedButtonInfo.Location = new System.Drawing.Point(36, 325);
             this.materialRaisedButtonInfo.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonInfo.Name = "materialRaisedButtonInfo";
             this.materialRaisedButtonInfo.Primary = true;
@@ -133,6 +135,32 @@
             this.materialRaisedButtonProducts.UseVisualStyleBackColor = true;
             this.materialRaisedButtonProducts.Click += new System.EventHandler(this.materialRaisedButtonProducts_Click);
             // 
+            // materialRaisedButtonUsers
+            // 
+            this.materialRaisedButtonUsers.Depth = 0;
+            this.materialRaisedButtonUsers.Location = new System.Drawing.Point(36, 198);
+            this.materialRaisedButtonUsers.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonUsers.Name = "materialRaisedButtonUsers";
+            this.materialRaisedButtonUsers.Primary = true;
+            this.materialRaisedButtonUsers.Size = new System.Drawing.Size(264, 23);
+            this.materialRaisedButtonUsers.TabIndex = 7;
+            this.materialRaisedButtonUsers.Text = "Продавцы";
+            this.materialRaisedButtonUsers.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonUsers.Click += new System.EventHandler(this.materialRaisedButtonUsers_Click);
+            // 
+            // materialRaisedButtonServices
+            // 
+            this.materialRaisedButtonServices.Depth = 0;
+            this.materialRaisedButtonServices.Location = new System.Drawing.Point(36, 169);
+            this.materialRaisedButtonServices.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonServices.Name = "materialRaisedButtonServices";
+            this.materialRaisedButtonServices.Primary = true;
+            this.materialRaisedButtonServices.Size = new System.Drawing.Size(264, 23);
+            this.materialRaisedButtonServices.TabIndex = 8;
+            this.materialRaisedButtonServices.Text = "Услуги";
+            this.materialRaisedButtonServices.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonServices.Click += new System.EventHandler(this.materialRaisedButtonServices_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -140,7 +168,9 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(339, 322);
+            this.ClientSize = new System.Drawing.Size(339, 378);
+            this.Controls.Add(this.materialRaisedButtonServices);
+            this.Controls.Add(this.materialRaisedButtonUsers);
             this.Controls.Add(this.materialRaisedButtonProducts);
             this.Controls.Add(this.materialRaisedButtonInfo);
             this.Controls.Add(this.materialRaisedButtonArch);
@@ -168,5 +198,7 @@
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonArch;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonInfo;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonProducts;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonUsers;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonServices;
     }
 }
