@@ -8,9 +8,9 @@ namespace VideoStore_Controller
 {
     public class ClientCardController
     {
-        private VideoStoreDbContext context;
+        private VideoDbContext context;
 
-        public ClientCardController(VideoStoreDbContext context)
+        public ClientCardController(VideoDbContext context)
         {
             this.context = context;
         }

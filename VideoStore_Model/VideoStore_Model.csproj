@@ -68,21 +68,9 @@
   <ItemGroup>
     <Compile Include="ClientCard.cs" />
     <Compile Include="ClientContract.cs" />
-    <Compile Include="Migrations\202002081336041_AddUsersTable.cs" />
-    <Compile Include="Migrations\202002081336041_AddUsersTable.designer.cs">
-      <DependentUpon>202002081336041_AddUsersTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202002090845284_UpdDbModel.cs" />
-    <Compile Include="Migrations\202002090845284_UpdDbModel.designer.cs">
-      <DependentUpon>202002090845284_UpdDbModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202002091326041_UpdDbModel2.cs" />
-    <Compile Include="Migrations\202002091326041_UpdDbModel2.designer.cs">
-      <DependentUpon>202002091326041_UpdDbModel2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202002161539138_ReturnDateFix.cs" />
-    <Compile Include="Migrations\202002161539138_ReturnDateFix.designer.cs">
-      <DependentUpon>202002161539138_ReturnDateFix.cs</DependentUpon>
+    <Compile Include="Migrations\202002161951437_NewVersionDB.cs" />
+    <Compile Include="Migrations\202002161951437_NewVersionDB.designer.cs">
+      <DependentUpon>202002161951437_NewVersionDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
@@ -101,17 +89,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202002081336041_AddUsersTable.resx">
-      <DependentUpon>202002081336041_AddUsersTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002090845284_UpdDbModel.resx">
-      <DependentUpon>202002090845284_UpdDbModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002091326041_UpdDbModel2.resx">
-      <DependentUpon>202002091326041_UpdDbModel2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002161539138_ReturnDateFix.resx">
-      <DependentUpon>202002161539138_ReturnDateFix.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002161951437_NewVersionDB.resx">
+      <DependentUpon>202002161951437_NewVersionDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class UpdDbModel : DbMigration
+    public partial class NewVersionDB : DbMigration
     {
         public override void Up()
         {
@@ -32,7 +32,7 @@
                         SummaryPrice = c.Int(nullable: false),
                         DateOfConclusion = c.DateTime(nullable: false),
                         RentalPeriodEnd = c.DateTime(nullable: false),
-                        ReturnDate = c.DateTime(nullable: false),
+                        ReturnDate = c.DateTime(nullable: true),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.ClientCards", t => t.ClientId, cascadeDelete: true)
@@ -49,9 +49,9 @@
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
                         Type = c.String(),
                         Price = c.Int(nullable: false),
-                        ClientContractId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -61,6 +61,19 @@
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Users",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        FIO = c.String(),
+                        Role = c.String(),
+                        Position = c.String(),
+                        Login = c.String(),
+                        Password = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -76,6 +89,7 @@
             DropIndex("dbo.ClientContracts", new[] { "ServiceId" });
             DropIndex("dbo.ClientContracts", new[] { "UserId" });
             DropIndex("dbo.ClientContracts", new[] { "ClientId" });
+            DropTable("dbo.Users");
             DropTable("dbo.Services");
             DropTable("dbo.Products");
             DropTable("dbo.ClientContracts");

@@ -8,9 +8,9 @@ namespace VideoStore_Controller
 {
     public class ClientContractController
     {
-        private VideoStoreDbContext context;
+        private VideoDbContext context;
 
-        public ClientContractController(VideoStoreDbContext context)
+        public ClientContractController(VideoDbContext context)
         {
             this.context = context;
         }
@@ -34,6 +34,14 @@ namespace VideoStore_Controller
             })
             .ToList();
             return result;
+        }
+
+        //получение номера первого договора в списке
+        public int getFirstContractId()
+        {
+            ClientContract element = context.ClientContracts.FirstOrDefault();
+            int firstId = element.Id;
+            return firstId;
         }
         // добавление нового договора
         public void AddElement(ClientContract model)

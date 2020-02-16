@@ -241,13 +241,14 @@
             this.materialRaisedButtonDel.Primary = true;
             this.materialRaisedButtonDel.Size = new System.Drawing.Size(140, 23);
             this.materialRaisedButtonDel.TabIndex = 34;
-            this.materialRaisedButtonDel.Text = "Удалить клиента";
+            this.materialRaisedButtonDel.Text = "Удалить договор";
             this.materialRaisedButtonDel.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonDel.Click += new System.EventHandler(this.materialRaisedButtonDel_Click);
             // 
             // materialSingleLineTextFieldId
             // 
             this.materialSingleLineTextFieldId.Depth = 0;
-            this.materialSingleLineTextFieldId.Hint = "ID клиента";
+            this.materialSingleLineTextFieldId.Hint = "ID договора";
             this.materialSingleLineTextFieldId.Location = new System.Drawing.Point(28, 426);
             this.materialSingleLineTextFieldId.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldId.Name = "materialSingleLineTextFieldId";

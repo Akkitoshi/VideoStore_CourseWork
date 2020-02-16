@@ -35,7 +35,7 @@ namespace VideoStore_View
                     });
 
                     materialLabelInfo.ForeColor = Color.Green;
-                    materialLabelInfo.Text = "Товар добавлен";
+                    materialLabelInfo.Text = "Услуга добавлена";
                     materialRaisedButtonAddService.Enabled = false;
                 }
                 catch

@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.materialRaisedButtonAddSevice = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonDel = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialSingleLineTextFieldId = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabelError = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,9 +44,9 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -53,16 +54,16 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 68);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Size = new System.Drawing.Size(431, 335);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView1.Size = new System.Drawing.Size(431, 316);
             this.dataGridView1.TabIndex = 3;
             // 
             // materialRaisedButtonAddSevice
             // 
             this.materialRaisedButtonAddSevice.Depth = 0;
-            this.materialRaisedButtonAddSevice.Location = new System.Drawing.Point(137, 409);
+            this.materialRaisedButtonAddSevice.Location = new System.Drawing.Point(132, 390);
             this.materialRaisedButtonAddSevice.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonAddSevice.Name = "materialRaisedButtonAddSevice";
             this.materialRaisedButtonAddSevice.Primary = true;
@@ -83,6 +84,7 @@
             this.materialRaisedButtonDel.TabIndex = 36;
             this.materialRaisedButtonDel.Text = "Удалить услугу";
             this.materialRaisedButtonDel.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonDel.Click += new System.EventHandler(this.materialRaisedButtonDel_Click);
             // 
             // materialSingleLineTextFieldId
             // 
@@ -99,11 +101,26 @@
             this.materialSingleLineTextFieldId.TabIndex = 35;
             this.materialSingleLineTextFieldId.UseSystemPasswordChar = false;
             // 
+            // materialLabelError
+            // 
+            this.materialLabelError.AutoSize = true;
+            this.materialLabelError.BackColor = System.Drawing.Color.Transparent;
+            this.materialLabelError.Depth = 0;
+            this.materialLabelError.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabelError.ForeColor = System.Drawing.Color.White;
+            this.materialLabelError.Location = new System.Drawing.Point(12, 422);
+            this.materialLabelError.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabelError.Name = "materialLabelError";
+            this.materialLabelError.Size = new System.Drawing.Size(13, 19);
+            this.materialLabelError.TabIndex = 37;
+            this.materialLabelError.Text = "-";
+            // 
             // FormServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 479);
+            this.ClientSize = new System.Drawing.Size(455, 501);
+            this.Controls.Add(this.materialLabelError);
             this.Controls.Add(this.materialRaisedButtonDel);
             this.Controls.Add(this.materialSingleLineTextFieldId);
             this.Controls.Add(this.dataGridView1);
@@ -117,6 +134,7 @@
             this.Load += new System.EventHandler(this.FormServices_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -126,5 +144,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonAddSevice;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonDel;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldId;
+        private MaterialSkin.Controls.MaterialLabel materialLabelError;
     }
 }

@@ -207,6 +207,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VideoDbContextDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VideoDbContextDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormArchieve.resx">
       <DependentUpon>FormArchieve.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +279,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="VideoDbContextDataSet.xsc">
+      <DependentUpon>VideoDbContextDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VideoDbContextDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VideoDbContextDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VideoDbContextDataSet.xss">
+      <DependentUpon>VideoDbContextDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

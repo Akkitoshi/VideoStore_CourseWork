@@ -233,5 +233,19 @@ namespace VideoStore_View
                 materialLabelError.Text = "Ошибка";
             }
         }
+
+        private void materialRaisedButtonDel_Click(object sender, EventArgs e)
+        {
+            materialLabelError.ForeColor = Color.White;
+            try
+            {
+                service.delElement(Convert.ToInt32(materialSingleLineTextFieldId.Text));
+            }
+            catch (Exception ex)
+            {
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Ошибка";
+            }
+        }
     }
 }

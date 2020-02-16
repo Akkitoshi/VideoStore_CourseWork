@@ -7,13 +7,13 @@ namespace VideoStore_Model.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class UpdDbModel : IMigrationMetadata
+    public sealed partial class NewVersionDB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdDbModel));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(NewVersionDB));
         
         string IMigrationMetadata.Id
         {
-            get { return "202002090845284_UpdDbModel"; }
+            get { return "202002161951437_NewVersionDB"; }
         }
         
         string IMigrationMetadata.Source

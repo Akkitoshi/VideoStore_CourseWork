@@ -294,6 +294,7 @@
             this.materialRaisedButtonDel.TabIndex = 32;
             this.materialRaisedButtonDel.Text = "Удалить клиента";
             this.materialRaisedButtonDel.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonDel.Click += new System.EventHandler(this.materialRaisedButtonDel_Click);
             // 
             // FormClients
             // 

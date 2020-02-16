@@ -33,6 +33,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.materialRaisedButtonDel = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialSingleLineTextFieldId = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabelError = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,14 +59,14 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(481, 324);
+            this.dataGridView1.Size = new System.Drawing.Size(431, 305);
             this.dataGridView1.TabIndex = 2;
             // 
             // materialRaisedButtonDel
             // 
             this.materialRaisedButtonDel.Depth = 0;
             this.materialRaisedButtonDel.Enabled = false;
-            this.materialRaisedButtonDel.Location = new System.Drawing.Point(276, 401);
+            this.materialRaisedButtonDel.Location = new System.Drawing.Point(226, 401);
             this.materialRaisedButtonDel.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonDel.Name = "materialRaisedButtonDel";
             this.materialRaisedButtonDel.Primary = true;
@@ -80,7 +81,7 @@
             this.materialSingleLineTextFieldId.Depth = 0;
             this.materialSingleLineTextFieldId.Enabled = false;
             this.materialSingleLineTextFieldId.Hint = "ID продавца";
-            this.materialSingleLineTextFieldId.Location = new System.Drawing.Point(63, 401);
+            this.materialSingleLineTextFieldId.Location = new System.Drawing.Point(12, 401);
             this.materialSingleLineTextFieldId.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldId.Name = "materialSingleLineTextFieldId";
             this.materialSingleLineTextFieldId.PasswordChar = '\0';
@@ -91,19 +92,36 @@
             this.materialSingleLineTextFieldId.TabIndex = 35;
             this.materialSingleLineTextFieldId.UseSystemPasswordChar = false;
             // 
+            // materialLabelError
+            // 
+            this.materialLabelError.AutoSize = true;
+            this.materialLabelError.BackColor = System.Drawing.Color.Transparent;
+            this.materialLabelError.Depth = 0;
+            this.materialLabelError.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabelError.ForeColor = System.Drawing.Color.White;
+            this.materialLabelError.Location = new System.Drawing.Point(12, 379);
+            this.materialLabelError.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabelError.Name = "materialLabelError";
+            this.materialLabelError.Size = new System.Drawing.Size(13, 19);
+            this.materialLabelError.TabIndex = 37;
+            this.materialLabelError.Text = "-";
+            // 
             // FormUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 430);
+            this.ClientSize = new System.Drawing.Size(455, 439);
+            this.Controls.Add(this.materialLabelError);
             this.Controls.Add(this.materialRaisedButtonDel);
             this.Controls.Add(this.materialSingleLineTextFieldId);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormUsers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Продавцы-консультанты";
             this.Load += new System.EventHandler(this.FormUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -112,5 +130,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonDel;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldId;
+        private MaterialSkin.Controls.MaterialLabel materialLabelError;
     }
 }

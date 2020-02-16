@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace VideoStore_Model
 {
-   public class VideoStoreDbContext : DbContext
+   public class VideoDbContext : DbContext
     {
-        public VideoStoreDbContext() : base("VideoStoreDbContext")
+        public VideoDbContext() : base("VideoDbContext")
         {
             //настройки конфигурации для entity
             Configuration.ProxyCreationEnabled = false;

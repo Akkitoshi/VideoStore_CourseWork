@@ -8,9 +8,9 @@ namespace VideoStore_Controller
 {
     public class ProductsController
     {
-        private VideoStoreDbContext context;
+        private VideoDbContext context;
 
-        public ProductsController(VideoStoreDbContext context)
+        public ProductsController(VideoDbContext context)
         {
             this.context = context;
         }
