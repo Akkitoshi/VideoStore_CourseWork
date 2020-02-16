@@ -15,14 +15,12 @@ namespace VideoStore_View
         [Dependency]
         public new IUnityContainer Container { get; set; }
         private readonly ClientContractController service;
-        private readonly ClientCardController service2;
         public string emptyNumber = "";
 
         public FormClientContracts(ClientContractController service, ClientCardController service2)
         {
             InitializeComponent();
             this.service = service;
-            this.service2 = service2;
             materialLabelError.ForeColor = Color.White;
         }
 
@@ -58,29 +56,7 @@ namespace VideoStore_View
                 materialLabelError.Text = "Ошибка при загрузке данных";
             }
         }
-        private void materialRaisedButtonPenalties_Click(object sender, EventArgs e)
-        {
-            materialLabelError.ForeColor = Color.White;
-            if (string.IsNullOrEmpty(materialSingleLineTextFieldFIOClent.Text))
-            {
-                materialLabelError.ForeColor = Color.Red;
-                materialLabelError.Text = "Введите ФИО клиента";
-            }
-            try
-            {
-                service2.UpdElement(new ClientCard
-                {
-                    Penalties = Convert.ToInt32(materialSingleLineTextFieldPinalties.Text)
-                });
-                materialLabelError.ForeColor = Color.Green;
-                materialLabelError.Text = "Добавление прошло успешно";
-            }
-            catch
-            {
-                materialLabelError.ForeColor = Color.Red;
-                materialLabelError.Text = "Ошибка";
-            }
-        }
+      
         private void materialRaisedButtonSearchByContract_Click(object sender, EventArgs e)
         {
             materialLabelError.ForeColor = Color.White;
@@ -88,7 +64,7 @@ namespace VideoStore_View
             {
                 try
                 {
-                    List<ClientContractViewModel> list = service.getByNumber(materialSingleLineTextFieldContractNumber.Text);
+                    List<ClientContractViewModel> list = service.getByNumber(Convert.ToInt32(materialSingleLineTextFieldContractNumber.Text));
                     if (list != null)
                     {
                         dataGridView1.DataSource = list;
@@ -125,7 +101,7 @@ namespace VideoStore_View
             {
                 try
                 {
-                    List<ClientContractViewModel> list = service.getByNumber(materialSingleLineTextFieldFIO.Text);
+                    List<ClientContractViewModel> list = service.getContractByFIO(materialSingleLineTextFieldFIO.Text);
                     if (list != null)
                     {
                         dataGridView1.DataSource = list;
@@ -159,6 +135,8 @@ namespace VideoStore_View
         {
             LoadData();
             materialLabelError.ForeColor = Color.White;
+            materialSingleLineTextFieldContractNumber.Text = "";
+            materialSingleLineTextFieldFIO.Text = "";
         }
 
         private void materialRaisedButtonActive_Click(object sender, EventArgs e)
@@ -232,5 +210,28 @@ namespace VideoStore_View
             }
         }
 
+        private void materialRaisedButtonReturn_Click(object sender, EventArgs e)
+        {
+            materialLabelError.ForeColor = Color.White;
+            if (Convert.ToInt32(materialSingleLineTextFieldContractNumber.Text) == 0)
+            {
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Введите идентификатор договора";
+            }
+            
+            try
+            {
+                int id = Convert.ToInt32(materialSingleLineTextFieldContractNumber.Text);
+                DateTime returnDate = DateTime.Now;
+                service.UpdElement(returnDate, id);
+                materialLabelError.ForeColor = Color.Green;
+                materialLabelError.Text = "Дата возврата отмечена";
+            }
+            catch
+            {
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Ошибка";
+            }
+        }
     }
 }

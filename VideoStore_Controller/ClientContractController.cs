@@ -72,7 +72,7 @@ namespace VideoStore_Controller
             }
         }
         //поиск договора по номеру договора 
-        public List<ClientContractViewModel> getByNumber(string number)
+        public List<ClientContractViewModel> getByNumber(int number)
         {
             List<ClientContractViewModel> result = context.ClientContracts.Where(rec => rec.Id.Equals(number)).Select(rec => new
            ClientContractViewModel
@@ -98,8 +98,8 @@ namespace VideoStore_Controller
             ClientCard element1 = context.ClientCards.FirstOrDefault(rec => rec.FIO == fio);
             if (element1 != null)
             {
-                int ClientId = element1.Id;
-                List<ClientContractViewModel> result = context.ClientContracts.Where(rec => rec.ClientId.Equals(ClientId)).Select(rec => new
+                int ClientIdd = element1.Id;
+                List<ClientContractViewModel> result = context.ClientContracts.Where(rec => rec.ClientId.Equals(ClientIdd)).Select(rec => new
              ClientContractViewModel
                 {
                     Id = rec.Id,
@@ -144,7 +144,7 @@ namespace VideoStore_Controller
         //поиск просроченных договоров
         public List<ClientContractViewModel> getByNoActive()
         {
-            List<ClientContractViewModel> result = context.ClientContracts.Where(rec => rec.RentalPeriodEnd <= DateTime.Now && rec.ReturnDate == null).Select(rec => new
+            List<ClientContractViewModel> result = context.ClientContracts.Where(rec => rec.ReturnDate > rec.RentalPeriodEnd || rec.ReturnDate==null && rec.RentalPeriodEnd < DateTime.Now).Select(rec => new
            ClientContractViewModel
             {
                 Id = rec.Id,
@@ -162,5 +162,63 @@ namespace VideoStore_Controller
             return result;
         }
 
+        //задать дату возврата
+        public void UpdElement(DateTime returnDate, int id)
+        {
+            ClientContract element = context.ClientContracts.FirstOrDefault(rec => rec.Id ==
+          id);
+            if (element.ReturnDate == null)
+            {
+                element.ReturnDate = returnDate;
+                context.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("Дата возврата уже отмечена");
+            }
+        }
+        //начислить обращение клиенту
+        public void UpdFrequency(int frq, int clientId)
+        {
+            ClientCard element = context.ClientCards.FirstOrDefault(rec => rec.Id ==
+          clientId);
+                element.Frequency = element.Frequency+frq;
+                context.SaveChanges();
+        }
+
+        // рассчитать сумму договора
+        public int GetPrice(int id)
+        {
+            Product element = context.Products.FirstOrDefault(rec => rec.Id == id);
+            int price = element.Price;
+            return price;
+        }
+        //удалить контракт
+        public void delElement(int id)
+        {
+            using (var transaction = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    ClientContract element = context.ClientContracts.FirstOrDefault(rec => rec.Id ==
+                   id);
+                    if (element != null)
+                    {
+                        context.ClientContracts.Remove(element);
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        throw new Exception("Элемент не найден");
+                    }
+                    transaction.Commit();
+                }
+                catch (Exception)
+                {
+                    transaction.Rollback();
+                    throw;
+                }
+            }
+        }
     }
 }

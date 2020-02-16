@@ -29,7 +29,7 @@ namespace VideoStore_Model
         [DataMember]
         public DateTime RentalPeriodEnd { get; set; }
         [DataMember]
-        public DateTime ReturnDate { get; set; }
+        public DateTime? ReturnDate { get; set; }
         public virtual ClientCard ClientCard { get; set; }
         public virtual User User { get; set; }
         public virtual Product Product { get; set; }

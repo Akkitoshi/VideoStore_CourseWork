@@ -48,7 +48,7 @@
             this.labelRequiredFields.BackColor = System.Drawing.Color.Transparent;
             this.labelRequiredFields.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelRequiredFields.ForeColor = System.Drawing.Color.Silver;
-            this.labelRequiredFields.Location = new System.Drawing.Point(62, 371);
+            this.labelRequiredFields.Location = new System.Drawing.Point(62, 361);
             this.labelRequiredFields.Name = "labelRequiredFields";
             this.labelRequiredFields.Size = new System.Drawing.Size(195, 13);
             this.labelRequiredFields.TabIndex = 28;
@@ -57,7 +57,7 @@
             // materialRaisedButtonAddContract
             // 
             this.materialRaisedButtonAddContract.Depth = 0;
-            this.materialRaisedButtonAddContract.Location = new System.Drawing.Point(65, 345);
+            this.materialRaisedButtonAddContract.Location = new System.Drawing.Point(65, 335);
             this.materialRaisedButtonAddContract.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonAddContract.Name = "materialRaisedButtonAddContract";
             this.materialRaisedButtonAddContract.Primary = true;
@@ -86,7 +86,7 @@
             this.materialSingleLineTextFieldService.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.materialSingleLineTextFieldService.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.materialSingleLineTextFieldService.Depth = 0;
-            this.materialSingleLineTextFieldService.Hint = "Услуга*";
+            this.materialSingleLineTextFieldService.Hint = "ID Услуги*";
             this.materialSingleLineTextFieldService.Location = new System.Drawing.Point(42, 161);
             this.materialSingleLineTextFieldService.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldService.Name = "materialSingleLineTextFieldService";
@@ -103,7 +103,7 @@
             this.materialSingleLineTextFieldUser.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.materialSingleLineTextFieldUser.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.materialSingleLineTextFieldUser.Depth = 0;
-            this.materialSingleLineTextFieldUser.Hint = "Продавец*";
+            this.materialSingleLineTextFieldUser.Hint = "ID Продавца*";
             this.materialSingleLineTextFieldUser.Location = new System.Drawing.Point(42, 132);
             this.materialSingleLineTextFieldUser.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldUser.Name = "materialSingleLineTextFieldUser";
@@ -120,7 +120,7 @@
             this.materialSingleLineTextFieldClient.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.materialSingleLineTextFieldClient.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.materialSingleLineTextFieldClient.Depth = 0;
-            this.materialSingleLineTextFieldClient.Hint = "Клиент*";
+            this.materialSingleLineTextFieldClient.Hint = "ID Клиента*";
             this.materialSingleLineTextFieldClient.Location = new System.Drawing.Point(42, 103);
             this.materialSingleLineTextFieldClient.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldClient.Name = "materialSingleLineTextFieldClient";
@@ -137,7 +137,7 @@
             this.materialSingleLineTextFieldProduct.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.materialSingleLineTextFieldProduct.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.materialSingleLineTextFieldProduct.Depth = 0;
-            this.materialSingleLineTextFieldProduct.Hint = "Товар*";
+            this.materialSingleLineTextFieldProduct.Hint = "ID Товара*";
             this.materialSingleLineTextFieldProduct.Location = new System.Drawing.Point(42, 190);
             this.materialSingleLineTextFieldProduct.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldProduct.Name = "materialSingleLineTextFieldProduct";
@@ -171,6 +171,7 @@
             this.materialSingleLineTextFieldSumma.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.materialSingleLineTextFieldSumma.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.materialSingleLineTextFieldSumma.Depth = 0;
+            this.materialSingleLineTextFieldSumma.Enabled = false;
             this.materialSingleLineTextFieldSumma.Hint = "Сумма*";
             this.materialSingleLineTextFieldSumma.Location = new System.Drawing.Point(42, 248);
             this.materialSingleLineTextFieldSumma.MouseState = MaterialSkin.MouseState.HOVER;
@@ -181,6 +182,7 @@
             this.materialSingleLineTextFieldSumma.SelectionStart = 0;
             this.materialSingleLineTextFieldSumma.Size = new System.Drawing.Size(239, 23);
             this.materialSingleLineTextFieldSumma.TabIndex = 31;
+            this.materialSingleLineTextFieldSumma.Text = "Сумма";
             this.materialSingleLineTextFieldSumma.UseSystemPasswordChar = false;
             // 
             // materialSingleLineTextFieldStart

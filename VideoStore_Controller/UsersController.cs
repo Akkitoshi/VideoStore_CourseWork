@@ -34,5 +34,31 @@ namespace VideoStore_CourseWork
 
 
         //удалить продавца
+        public void delElement(int id)
+        {
+            using (var transaction = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    User element = context.Users.FirstOrDefault(rec => rec.Id ==
+                   id);
+                    if (element != null)
+                    {
+                        context.Users.Remove(element);
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        throw new Exception("Элемент не найден");
+                    }
+                    transaction.Commit();
+                }
+                catch (Exception)
+                {
+                    transaction.Rollback();
+                    throw;
+                }
+            }
+        }
     }
 }

@@ -85,7 +85,7 @@
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(87, 19);
             this.materialLabel2.TabIndex = 3;
-            this.materialLabel2.Text = "Контракты";
+            this.materialLabel2.Text = "Договоры";
             // 
             // materialRaisedButton1
             // 
@@ -108,7 +108,7 @@
             this.materialRaisedButton2.Primary = true;
             this.materialRaisedButton2.Size = new System.Drawing.Size(154, 23);
             this.materialRaisedButton2.TabIndex = 5;
-            this.materialRaisedButton2.Text = "Удалить контракт";
+            this.materialRaisedButton2.Text = "Удалить договор";
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
             // 
             // FormArchieve

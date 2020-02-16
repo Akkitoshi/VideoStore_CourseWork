@@ -17,7 +17,7 @@ namespace VideoStore_Controller
             this.context = context;
         }
 
-        //удаление контракта из БД
+        //удаление договора из БД
         public void delElementClientContract(int id)
         {
             using (var transaction = context.Database.BeginTransaction())
@@ -45,7 +45,7 @@ namespace VideoStore_Controller
             }
         }
 
-        //сохранение удаленного контракта в Json файл
+        //сохранение удаленного договора в Json файл
         public async Task SaveToJsonAsyncClientContract(string fileName)
         {
             DataContractJsonSerializer formatterPeople = new DataContractJsonSerializer(typeof(List<ClientContract>));

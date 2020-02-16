@@ -60,5 +60,32 @@ namespace VideoStore_Controller
                 }
             }
         }
+        //удалить продукт
+        public void delElement(int id)
+        {
+            using (var transaction = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    Product element = context.Products.FirstOrDefault(rec => rec.Id ==
+                   id);
+                    if (element != null)
+                    {
+                        context.Products.Remove(element);
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        throw new Exception("Элемент не найден");
+                    }
+                    transaction.Commit();
+                }
+                catch (Exception)
+                {
+                    transaction.Rollback();
+                    throw;
+                }
+            }
+        }
     }
 }

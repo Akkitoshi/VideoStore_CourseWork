@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Unity;
 using VideoStore_Controller;
+using VideoStore_Model;
 using VideoStore_Model.ViewModels;
 
 namespace VideoStore_View
@@ -197,6 +198,11 @@ namespace VideoStore_View
         {
             LoadData();
             materialLabelError.ForeColor = Color.White;
+            materialSingleLineTextFieldFIOClent.Text = "";
+            materialSingleLineTextFieldFIO.Text = "";
+            materialSingleLineTextFieldPassportNumber.Text = "";
+            materialSingleLineTextFieldPenalties.Text = "";
+
         }
 
         private void buttonUpd_Click(object sender, EventArgs e)
@@ -234,5 +240,34 @@ namespace VideoStore_View
                 materialLabelError.Text = "Ошибка";
             }
         }
+
+        private void materialRaisedButtonPenalties_Click(object sender, EventArgs e)
+        {
+            materialLabelError.ForeColor = Color.White;
+            if (string.IsNullOrEmpty(materialSingleLineTextFieldFIOClent.Text) )
+            {
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Введите ФИО клиента";
+            }
+            if (string.IsNullOrEmpty(materialSingleLineTextFieldPenalties.Text))
+            {
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Введите количество пени";
+            }
+            try
+            {
+                string FIO = materialSingleLineTextFieldFIOClent.Text;
+                int Penalties = Convert.ToInt32(materialSingleLineTextFieldPenalties.Text);
+                service.UpdElement(FIO, Penalties);
+            materialLabelError.ForeColor = Color.Green;
+                materialLabelError.Text = "Добавление прошло успешно";
+            }
+            catch
+            {
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Ошибка";
+            }
+        }
+
     }
 }

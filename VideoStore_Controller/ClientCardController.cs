@@ -63,27 +63,12 @@ namespace VideoStore_Controller
         }
 
         //обновление данных о пени
-        public void UpdElement(ClientCard model)
+        public void UpdElement(string FIO, int Penalties)
         {
-            using (var transaction = context.Database.BeginTransaction())
-            {
-                try
-                {
-                    ClientCard element = context.ClientCards.FirstOrDefault(rec => rec.FIO ==
-              model.FIO);
-                    if (element == null)
-                    {
-                        throw new Exception("Элемент не найден");
-                    }
-                    element.Penalties = model.Penalties;
-                    context.SaveChanges();
-                }
-                catch (Exception)
-                {
-                    transaction.Rollback();
-                    throw;
-                }
-            }
+            ClientCard element = context.ClientCards.FirstOrDefault(rec => rec.FIO ==
+          FIO);
+            element.Penalties = Penalties;
+            context.SaveChanges();
         }
 
         //поиск клиента по номеру паспорта 
@@ -163,6 +148,33 @@ namespace VideoStore_Controller
             }).OrderByDescending(rec => rec.Frequency)
               .ToList();
             return result;
+        }
+        //удалить клиента
+        public void delElement(int id)
+        {
+            using (var transaction = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    ClientCard element = context.ClientCards.FirstOrDefault(rec => rec.Id ==
+                   id);
+                    if (element != null)
+                    {
+                        context.ClientCards.Remove(element);
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        throw new Exception("Элемент не найден");
+                    }
+                    transaction.Commit();
+                }
+                catch (Exception)
+                {
+                    transaction.Rollback();
+                    throw;
+                }
+            }
         }
     }
 }

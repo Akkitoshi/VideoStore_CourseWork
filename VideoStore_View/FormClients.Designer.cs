@@ -33,7 +33,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClients));
             this.materialRaisedButtonAddClient = new MaterialSkin.Controls.MaterialRaisedButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.materialRaisedButtonUpd = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonCancel = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialSingleLineTextFieldFIO = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialRaisedButtonSearchByPassport = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -44,6 +43,11 @@
             this.materialRaisedButtonWithPenalties = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialLabelError = new MaterialSkin.Controls.MaterialLabel();
             this.materialRaisedButtonFrequency = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialSingleLineTextFieldPenalties = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialRaisedButtonPenalties = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialSingleLineTextFieldFIOClent = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextFieldId = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialRaisedButtonDel = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +58,7 @@
             this.materialRaisedButtonAddClient.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonAddClient.Name = "materialRaisedButtonAddClient";
             this.materialRaisedButtonAddClient.Primary = true;
-            this.materialRaisedButtonAddClient.Size = new System.Drawing.Size(220, 23);
+            this.materialRaisedButtonAddClient.Size = new System.Drawing.Size(310, 23);
             this.materialRaisedButtonAddClient.TabIndex = 0;
             this.materialRaisedButtonAddClient.Text = " Добавить клиента";
             this.materialRaisedButtonAddClient.UseVisualStyleBackColor = true;
@@ -85,27 +89,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(731, 317);
             this.dataGridView1.TabIndex = 1;
             // 
-            // materialRaisedButtonUpd
-            // 
-            this.materialRaisedButtonUpd.Depth = 0;
-            this.materialRaisedButtonUpd.Location = new System.Drawing.Point(654, 502);
-            this.materialRaisedButtonUpd.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButtonUpd.Name = "materialRaisedButtonUpd";
-            this.materialRaisedButtonUpd.Primary = true;
-            this.materialRaisedButtonUpd.Size = new System.Drawing.Size(84, 23);
-            this.materialRaisedButtonUpd.TabIndex = 2;
-            this.materialRaisedButtonUpd.Text = "обновить";
-            this.materialRaisedButtonUpd.UseVisualStyleBackColor = true;
-            this.materialRaisedButtonUpd.Click += new System.EventHandler(this.buttonUpd_Click);
-            // 
             // materialRaisedButtonCancel
             // 
             this.materialRaisedButtonCancel.Depth = 0;
-            this.materialRaisedButtonCancel.Location = new System.Drawing.Point(328, 473);
+            this.materialRaisedButtonCancel.Location = new System.Drawing.Point(598, 558);
             this.materialRaisedButtonCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonCancel.Name = "materialRaisedButtonCancel";
             this.materialRaisedButtonCancel.Primary = true;
-            this.materialRaisedButtonCancel.Size = new System.Drawing.Size(84, 23);
+            this.materialRaisedButtonCancel.Size = new System.Drawing.Size(140, 23);
             this.materialRaisedButtonCancel.TabIndex = 3;
             this.materialRaisedButtonCancel.Text = "сбросить";
             this.materialRaisedButtonCancel.UseVisualStyleBackColor = true;
@@ -234,11 +225,86 @@
             this.materialRaisedButtonFrequency.UseVisualStyleBackColor = true;
             this.materialRaisedButtonFrequency.Click += new System.EventHandler(this.materialRaisedButtonFrequency_Click);
             // 
+            // materialSingleLineTextFieldPenalties
+            // 
+            this.materialSingleLineTextFieldPenalties.Depth = 0;
+            this.materialSingleLineTextFieldPenalties.Hint = "Пени";
+            this.materialSingleLineTextFieldPenalties.Location = new System.Drawing.Point(12, 560);
+            this.materialSingleLineTextFieldPenalties.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextFieldPenalties.Name = "materialSingleLineTextFieldPenalties";
+            this.materialSingleLineTextFieldPenalties.PasswordChar = '\0';
+            this.materialSingleLineTextFieldPenalties.SelectedText = "";
+            this.materialSingleLineTextFieldPenalties.SelectionLength = 0;
+            this.materialSingleLineTextFieldPenalties.SelectionStart = 0;
+            this.materialSingleLineTextFieldPenalties.Size = new System.Drawing.Size(310, 23);
+            this.materialSingleLineTextFieldPenalties.TabIndex = 30;
+            this.materialSingleLineTextFieldPenalties.UseSystemPasswordChar = false;
+            // 
+            // materialRaisedButtonPenalties
+            // 
+            this.materialRaisedButtonPenalties.Depth = 0;
+            this.materialRaisedButtonPenalties.Location = new System.Drawing.Point(328, 560);
+            this.materialRaisedButtonPenalties.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonPenalties.Name = "materialRaisedButtonPenalties";
+            this.materialRaisedButtonPenalties.Primary = true;
+            this.materialRaisedButtonPenalties.Size = new System.Drawing.Size(140, 23);
+            this.materialRaisedButtonPenalties.TabIndex = 28;
+            this.materialRaisedButtonPenalties.Text = "Начислить пени";
+            this.materialRaisedButtonPenalties.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonPenalties.Click += new System.EventHandler(this.materialRaisedButtonPenalties_Click);
+            // 
+            // materialSingleLineTextFieldFIOClent
+            // 
+            this.materialSingleLineTextFieldFIOClent.Depth = 0;
+            this.materialSingleLineTextFieldFIOClent.Hint = "ФИО клиента";
+            this.materialSingleLineTextFieldFIOClent.Location = new System.Drawing.Point(12, 531);
+            this.materialSingleLineTextFieldFIOClent.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextFieldFIOClent.Name = "materialSingleLineTextFieldFIOClent";
+            this.materialSingleLineTextFieldFIOClent.PasswordChar = '\0';
+            this.materialSingleLineTextFieldFIOClent.SelectedText = "";
+            this.materialSingleLineTextFieldFIOClent.SelectionLength = 0;
+            this.materialSingleLineTextFieldFIOClent.SelectionStart = 0;
+            this.materialSingleLineTextFieldFIOClent.Size = new System.Drawing.Size(310, 23);
+            this.materialSingleLineTextFieldFIOClent.TabIndex = 27;
+            this.materialSingleLineTextFieldFIOClent.UseSystemPasswordChar = false;
+            // 
+            // materialSingleLineTextFieldId
+            // 
+            this.materialSingleLineTextFieldId.Depth = 0;
+            this.materialSingleLineTextFieldId.Hint = "ID клиента";
+            this.materialSingleLineTextFieldId.Location = new System.Drawing.Point(12, 596);
+            this.materialSingleLineTextFieldId.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextFieldId.Name = "materialSingleLineTextFieldId";
+            this.materialSingleLineTextFieldId.PasswordChar = '\0';
+            this.materialSingleLineTextFieldId.SelectedText = "";
+            this.materialSingleLineTextFieldId.SelectionLength = 0;
+            this.materialSingleLineTextFieldId.SelectionStart = 0;
+            this.materialSingleLineTextFieldId.Size = new System.Drawing.Size(310, 23);
+            this.materialSingleLineTextFieldId.TabIndex = 31;
+            this.materialSingleLineTextFieldId.UseSystemPasswordChar = false;
+            // 
+            // materialRaisedButtonDel
+            // 
+            this.materialRaisedButtonDel.Depth = 0;
+            this.materialRaisedButtonDel.Location = new System.Drawing.Point(328, 596);
+            this.materialRaisedButtonDel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonDel.Name = "materialRaisedButtonDel";
+            this.materialRaisedButtonDel.Primary = true;
+            this.materialRaisedButtonDel.Size = new System.Drawing.Size(140, 23);
+            this.materialRaisedButtonDel.TabIndex = 32;
+            this.materialRaisedButtonDel.Text = "Удалить клиента";
+            this.materialRaisedButtonDel.UseVisualStyleBackColor = true;
+            // 
             // FormClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(755, 534);
+            this.ClientSize = new System.Drawing.Size(755, 631);
+            this.Controls.Add(this.materialRaisedButtonDel);
+            this.Controls.Add(this.materialSingleLineTextFieldId);
+            this.Controls.Add(this.materialSingleLineTextFieldPenalties);
+            this.Controls.Add(this.materialRaisedButtonPenalties);
+            this.Controls.Add(this.materialSingleLineTextFieldFIOClent);
             this.Controls.Add(this.materialRaisedButtonFrequency);
             this.Controls.Add(this.materialLabelError);
             this.Controls.Add(this.materialRaisedButtonWithPenalties);
@@ -249,7 +315,6 @@
             this.Controls.Add(this.materialRaisedButtonSearchByPassport);
             this.Controls.Add(this.materialSingleLineTextFieldFIO);
             this.Controls.Add(this.materialRaisedButtonCancel);
-            this.Controls.Add(this.materialRaisedButtonUpd);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.materialRaisedButtonAddClient);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -270,7 +335,6 @@
 
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonAddClient;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonUpd;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonCancel;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldFIO;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonSearchByPassport;
@@ -281,5 +345,10 @@
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonWithPenalties;
         private MaterialSkin.Controls.MaterialLabel materialLabelError;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonFrequency;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldPenalties;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonPenalties;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldFIOClent;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldId;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonDel;
     }
 }

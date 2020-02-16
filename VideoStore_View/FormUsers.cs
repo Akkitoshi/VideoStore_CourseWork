@@ -39,11 +39,24 @@ namespace VideoStore_View
                     dataGridView1.DataSource = list;
                     dataGridView1.Columns[0].Visible = true;
                     dataGridView1.Columns[1].Visible = true;
-                    dataGridView1.Columns[2].Visible = true;
-                    dataGridView1.Columns[3].Visible = true;
+                    dataGridView1.Columns[2].Visible = false;
+                    dataGridView1.Columns[3].Visible = false;
                     dataGridView1.Columns[1].AutoSizeMode =
                         DataGridViewAutoSizeColumnMode.Fill;
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
+               MessageBoxIcon.Error);
+            }
+        }
+
+        private void materialRaisedButtonDel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                service.delElement(Convert.ToInt32(materialSingleLineTextFieldId.Text));
             }
             catch (Exception ex)
             {

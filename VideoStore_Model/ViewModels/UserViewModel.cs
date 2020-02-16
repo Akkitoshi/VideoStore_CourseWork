@@ -12,9 +12,5 @@ namespace VideoStore_Model.ViewModels
         public string Role { get; set; }
         [DisplayName("Должность")]
         public string Position { get; set; }
-        [DisplayName("Логин")]
-        public string Login { get; set; }
-        [DisplayName("Пароль")]
-        public string Password { get; set; }
     }
 }

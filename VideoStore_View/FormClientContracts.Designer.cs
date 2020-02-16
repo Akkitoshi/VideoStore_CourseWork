@@ -39,13 +39,12 @@
             this.materialRaisedButtonSearchByFIO = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialSingleLineTextFieldContractNumber = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialRaisedButtonCancel = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButtonUpd = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonAddContract = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialSingleLineTextFieldFIOClent = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialRaisedButtonPenalties = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialLabelError = new MaterialSkin.Controls.MaterialLabel();
-            this.materialSingleLineTextFieldPinalties = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.materialLabelError = new MaterialSkin.Controls.MaterialLabel();
+            this.materialRaisedButtonReturn = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButtonDel = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialSingleLineTextFieldId = new MaterialSkin.Controls.MaterialSingleLineTextField();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,9 +112,9 @@
             this.materialLabel1.Location = new System.Drawing.Point(24, 301);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(130, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(125, 19);
             this.materialLabel1.TabIndex = 18;
-            this.materialLabel1.Text = "Поиск контракта";
+            this.materialLabel1.Text = "Поиск договора";
             // 
             // materialRaisedButtonSearchByFIO
             // 
@@ -148,33 +147,20 @@
             // materialRaisedButtonCancel
             // 
             this.materialRaisedButtonCancel.Depth = 0;
-            this.materialRaisedButtonCancel.Location = new System.Drawing.Point(1033, 389);
+            this.materialRaisedButtonCancel.Location = new System.Drawing.Point(875, 415);
             this.materialRaisedButtonCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonCancel.Name = "materialRaisedButtonCancel";
             this.materialRaisedButtonCancel.Primary = true;
-            this.materialRaisedButtonCancel.Size = new System.Drawing.Size(84, 23);
+            this.materialRaisedButtonCancel.Size = new System.Drawing.Size(310, 23);
             this.materialRaisedButtonCancel.TabIndex = 15;
             this.materialRaisedButtonCancel.Text = "сбросить";
             this.materialRaisedButtonCancel.UseVisualStyleBackColor = true;
             this.materialRaisedButtonCancel.Click += new System.EventHandler(this.materialRaisedButtonCancel_Click);
             // 
-            // materialRaisedButtonUpd
-            // 
-            this.materialRaisedButtonUpd.Depth = 0;
-            this.materialRaisedButtonUpd.Location = new System.Drawing.Point(943, 389);
-            this.materialRaisedButtonUpd.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButtonUpd.Name = "materialRaisedButtonUpd";
-            this.materialRaisedButtonUpd.Primary = true;
-            this.materialRaisedButtonUpd.Size = new System.Drawing.Size(84, 23);
-            this.materialRaisedButtonUpd.TabIndex = 14;
-            this.materialRaisedButtonUpd.Text = "обновить";
-            this.materialRaisedButtonUpd.UseVisualStyleBackColor = true;
-            this.materialRaisedButtonUpd.Click += new System.EventHandler(this.materialRaisedButtonUpd_Click);
-            // 
             // materialRaisedButtonAddContract
             // 
             this.materialRaisedButtonAddContract.Depth = 0;
-            this.materialRaisedButtonAddContract.Location = new System.Drawing.Point(875, 443);
+            this.materialRaisedButtonAddContract.Location = new System.Drawing.Point(875, 386);
             this.materialRaisedButtonAddContract.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonAddContract.Name = "materialRaisedButtonAddContract";
             this.materialRaisedButtonAddContract.Primary = true;
@@ -183,63 +169,6 @@
             this.materialRaisedButtonAddContract.Text = " Добавить договор";
             this.materialRaisedButtonAddContract.UseVisualStyleBackColor = true;
             this.materialRaisedButtonAddContract.Click += new System.EventHandler(this.materialRaisedButtonAddContract_Click);
-            // 
-            // materialSingleLineTextFieldFIOClent
-            // 
-            this.materialSingleLineTextFieldFIOClent.Depth = 0;
-            this.materialSingleLineTextFieldFIOClent.Hint = "ФИО клиента";
-            this.materialSingleLineTextFieldFIOClent.Location = new System.Drawing.Point(28, 414);
-            this.materialSingleLineTextFieldFIOClent.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextFieldFIOClent.Name = "materialSingleLineTextFieldFIOClent";
-            this.materialSingleLineTextFieldFIOClent.PasswordChar = '\0';
-            this.materialSingleLineTextFieldFIOClent.SelectedText = "";
-            this.materialSingleLineTextFieldFIOClent.SelectionLength = 0;
-            this.materialSingleLineTextFieldFIOClent.SelectionStart = 0;
-            this.materialSingleLineTextFieldFIOClent.Size = new System.Drawing.Size(310, 23);
-            this.materialSingleLineTextFieldFIOClent.TabIndex = 23;
-            this.materialSingleLineTextFieldFIOClent.UseSystemPasswordChar = false;
-            // 
-            // materialRaisedButtonPenalties
-            // 
-            this.materialRaisedButtonPenalties.Depth = 0;
-            this.materialRaisedButtonPenalties.Location = new System.Drawing.Point(344, 443);
-            this.materialRaisedButtonPenalties.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButtonPenalties.Name = "materialRaisedButtonPenalties";
-            this.materialRaisedButtonPenalties.Primary = true;
-            this.materialRaisedButtonPenalties.Size = new System.Drawing.Size(131, 23);
-            this.materialRaisedButtonPenalties.TabIndex = 24;
-            this.materialRaisedButtonPenalties.Text = "Начислить пени";
-            this.materialRaisedButtonPenalties.UseVisualStyleBackColor = true;
-            this.materialRaisedButtonPenalties.Click += new System.EventHandler(this.materialRaisedButtonPenalties_Click);
-            // 
-            // materialLabelError
-            // 
-            this.materialLabelError.AutoSize = true;
-            this.materialLabelError.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabelError.Depth = 0;
-            this.materialLabelError.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabelError.Location = new System.Drawing.Point(24, 389);
-            this.materialLabelError.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabelError.Name = "materialLabelError";
-            this.materialLabelError.Size = new System.Drawing.Size(13, 19);
-            this.materialLabelError.TabIndex = 25;
-            this.materialLabelError.Text = "-";
-            // 
-            // materialSingleLineTextFieldPinalties
-            // 
-            this.materialSingleLineTextFieldPinalties.Depth = 0;
-            this.materialSingleLineTextFieldPinalties.Hint = "Пени";
-            this.materialSingleLineTextFieldPinalties.Location = new System.Drawing.Point(28, 443);
-            this.materialSingleLineTextFieldPinalties.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextFieldPinalties.Name = "materialSingleLineTextFieldPinalties";
-            this.materialSingleLineTextFieldPinalties.PasswordChar = '\0';
-            this.materialSingleLineTextFieldPinalties.SelectedText = "";
-            this.materialSingleLineTextFieldPinalties.SelectionLength = 0;
-            this.materialSingleLineTextFieldPinalties.SelectionStart = 0;
-            this.materialSingleLineTextFieldPinalties.Size = new System.Drawing.Size(310, 23);
-            this.materialSingleLineTextFieldPinalties.TabIndex = 26;
-            this.materialSingleLineTextFieldPinalties.UseSystemPasswordChar = false;
             // 
             // dataGridView1
             // 
@@ -276,16 +205,70 @@
             this.dataGridView1.Size = new System.Drawing.Size(1176, 221);
             this.dataGridView1.TabIndex = 27;
             // 
+            // materialLabelError
+            // 
+            this.materialLabelError.AutoSize = true;
+            this.materialLabelError.BackColor = System.Drawing.Color.Transparent;
+            this.materialLabelError.Depth = 0;
+            this.materialLabelError.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabelError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabelError.Location = new System.Drawing.Point(24, 390);
+            this.materialLabelError.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabelError.Name = "materialLabelError";
+            this.materialLabelError.Size = new System.Drawing.Size(13, 19);
+            this.materialLabelError.TabIndex = 28;
+            this.materialLabelError.Text = "-";
+            // 
+            // materialRaisedButtonReturn
+            // 
+            this.materialRaisedButtonReturn.Depth = 0;
+            this.materialRaisedButtonReturn.Location = new System.Drawing.Point(434, 330);
+            this.materialRaisedButtonReturn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonReturn.Name = "materialRaisedButtonReturn";
+            this.materialRaisedButtonReturn.Primary = true;
+            this.materialRaisedButtonReturn.Size = new System.Drawing.Size(156, 23);
+            this.materialRaisedButtonReturn.TabIndex = 29;
+            this.materialRaisedButtonReturn.Text = "Отметить возврат";
+            this.materialRaisedButtonReturn.UseVisualStyleBackColor = true;
+            this.materialRaisedButtonReturn.Click += new System.EventHandler(this.materialRaisedButtonReturn_Click);
+            // 
+            // materialRaisedButtonDel
+            // 
+            this.materialRaisedButtonDel.Depth = 0;
+            this.materialRaisedButtonDel.Location = new System.Drawing.Point(344, 426);
+            this.materialRaisedButtonDel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButtonDel.Name = "materialRaisedButtonDel";
+            this.materialRaisedButtonDel.Primary = true;
+            this.materialRaisedButtonDel.Size = new System.Drawing.Size(140, 23);
+            this.materialRaisedButtonDel.TabIndex = 34;
+            this.materialRaisedButtonDel.Text = "Удалить клиента";
+            this.materialRaisedButtonDel.UseVisualStyleBackColor = true;
+            // 
+            // materialSingleLineTextFieldId
+            // 
+            this.materialSingleLineTextFieldId.Depth = 0;
+            this.materialSingleLineTextFieldId.Hint = "ID клиента";
+            this.materialSingleLineTextFieldId.Location = new System.Drawing.Point(28, 426);
+            this.materialSingleLineTextFieldId.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextFieldId.Name = "materialSingleLineTextFieldId";
+            this.materialSingleLineTextFieldId.PasswordChar = '\0';
+            this.materialSingleLineTextFieldId.SelectedText = "";
+            this.materialSingleLineTextFieldId.SelectionLength = 0;
+            this.materialSingleLineTextFieldId.SelectionStart = 0;
+            this.materialSingleLineTextFieldId.Size = new System.Drawing.Size(310, 23);
+            this.materialSingleLineTextFieldId.TabIndex = 33;
+            this.materialSingleLineTextFieldId.UseSystemPasswordChar = false;
+            // 
             // FormClientContracts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1197, 493);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.materialSingleLineTextFieldPinalties);
+            this.ClientSize = new System.Drawing.Size(1197, 461);
+            this.Controls.Add(this.materialRaisedButtonDel);
+            this.Controls.Add(this.materialSingleLineTextFieldId);
+            this.Controls.Add(this.materialRaisedButtonReturn);
             this.Controls.Add(this.materialLabelError);
-            this.Controls.Add(this.materialRaisedButtonPenalties);
-            this.Controls.Add(this.materialSingleLineTextFieldFIOClent);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.materialRaisedButtonActive);
             this.Controls.Add(this.materialRaisedButtonNoActive);
             this.Controls.Add(this.materialSingleLineTextFieldFIO);
@@ -294,7 +277,6 @@
             this.Controls.Add(this.materialRaisedButtonSearchByFIO);
             this.Controls.Add(this.materialSingleLineTextFieldContractNumber);
             this.Controls.Add(this.materialRaisedButtonCancel);
-            this.Controls.Add(this.materialRaisedButtonUpd);
             this.Controls.Add(this.materialRaisedButtonAddContract);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -319,12 +301,11 @@
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonSearchByFIO;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldContractNumber;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonCancel;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonUpd;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonAddContract;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldFIOClent;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonPenalties;
-        private MaterialSkin.Controls.MaterialLabel materialLabelError;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldPinalties;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private MaterialSkin.Controls.MaterialLabel materialLabelError;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonReturn;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonDel;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldId;
     }
 }

@@ -80,6 +80,10 @@
     <Compile Include="Migrations\202002091326041_UpdDbModel2.designer.cs">
       <DependentUpon>202002091326041_UpdDbModel2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002161539138_ReturnDateFix.cs" />
+    <Compile Include="Migrations\202002161539138_ReturnDateFix.designer.cs">
+      <DependentUpon>202002161539138_ReturnDateFix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,6 +93,7 @@
     <Compile Include="ViewModels\ClientCardViewModel.cs" />
     <Compile Include="ViewModels\ClientContractViewModel.cs" />
     <Compile Include="ViewModels\ProductViewModel.cs" />
+    <Compile Include="ViewModels\ServiceViewModel.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002091326041_UpdDbModel2.resx">
       <DependentUpon>202002091326041_UpdDbModel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002161539138_ReturnDateFix.resx">
+      <DependentUpon>202002161539138_ReturnDateFix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

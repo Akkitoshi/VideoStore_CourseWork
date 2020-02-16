@@ -243,6 +243,12 @@
     <EmbeddedResource Include="FormReport.resx">
       <DependentUpon>FormReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormService.resx">
+      <DependentUpon>FormService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServices.resx">
+      <DependentUpon>FormServices.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSignUp.resx">
       <DependentUpon>FormSignUp.cs</DependentUpon>
     </EmbeddedResource>

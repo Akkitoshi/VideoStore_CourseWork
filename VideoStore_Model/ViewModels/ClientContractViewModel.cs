@@ -24,6 +24,6 @@ namespace VideoStore_Model.ViewModels
         [DisplayName("Окончание срока проката")]
         public DateTime RentalPeriodEnd { get; set; }
         [DisplayName("Дата возврата")]
-        public DateTime ReturnDate { get; set; }
+        public DateTime? ReturnDate { get; set; }
     }
 }

@@ -77,22 +77,25 @@ namespace VideoStore_View
                                     {
                                         try
                                         {
+                                            materialSingleLineTextFieldSumma.Text = ((service.GetPrice(Convert.ToInt32(materialSingleLineTextFieldProduct.Text))) * (Convert.ToInt32(materialSingleLineTextFieldAmount.Text))).ToString();
                                             service.AddElement(new ClientContract
                                             {
-                                                ClientId =Convert.ToInt32( materialSingleLineTextFieldClient.Text),
-                                                UserId= Convert.ToInt32(materialSingleLineTextFieldUser.Text),
-                                                ServiceId= Convert.ToInt32(materialSingleLineTextFieldService.Text),
-                                                ProductId= Convert.ToInt32(materialSingleLineTextFieldProduct.Text),
-                                                ProductAmount= Convert.ToInt32(materialSingleLineTextFieldAmount.Text),
-                                                SummaryPrice= Convert.ToInt32(materialSingleLineTextFieldSumma.Text),
-                                                DateOfConclusion= Convert.ToDateTime(materialSingleLineTextFieldStart.Text),
-                                                RentalPeriodEnd= Convert.ToDateTime(materialSingleLineTextFieldRental.Text)
+                                                ClientId = Convert.ToInt32(materialSingleLineTextFieldClient.Text),
+                                                UserId = Convert.ToInt32(materialSingleLineTextFieldUser.Text),
+                                                ServiceId = Convert.ToInt32(materialSingleLineTextFieldService.Text),
+                                                ProductId = Convert.ToInt32(materialSingleLineTextFieldProduct.Text),
+                                                ProductAmount = Convert.ToInt32(materialSingleLineTextFieldAmount.Text),
+                                                SummaryPrice = Convert.ToInt32(materialSingleLineTextFieldSumma.Text),
+                                                DateOfConclusion = Convert.ToDateTime(materialSingleLineTextFieldStart.Text),
+                                                RentalPeriodEnd = Convert.ToDateTime(materialSingleLineTextFieldRental.Text),
+                                                ReturnDate = null
 
-                                            }) ;
+                                            });
 
                                             materialLabelInfo.ForeColor = Color.Green;
-                                            materialLabelInfo.Text = "Контракт добавлен";
+                                            materialLabelInfo.Text = "Договор добавлен";
                                             materialRaisedButtonAddContract.Enabled = false;
+                                            service.UpdFrequency(1, Convert.ToInt32(materialSingleLineTextFieldClient.Text));
                                         }
                                         catch
                                         {

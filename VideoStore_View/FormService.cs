@@ -1,20 +1,49 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using Unity;
+using VideoStore_CourseWork;
+using VideoStore_Model;
 
 namespace VideoStore_View
 {
-    public partial class FormService : Form
+    public partial class FormService : MaterialForm
     {
-        public FormService()
+        [Dependency]
+        public new IUnityContainer Container { get; set; }
+        private readonly ServicesController service;
+        public FormService(ServicesController service)
         {
             InitializeComponent();
+            this.service = service;
+        }
+
+        private void materialRaisedButtonAddService_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(materialSingleLineTextFieldName.Text))
+            {
+                materialLabelInfo.ForeColor = Color.Red;
+                materialLabelInfo.Text = "Заполните поле наименование";
+            }
+            else
+            {
+                try
+                {
+                    service.AddElement(new Service
+                    {
+                        Name = materialSingleLineTextFieldName.Text,
+                    });
+
+                    materialLabelInfo.ForeColor = Color.Green;
+                    materialLabelInfo.Text = "Товар добавлен";
+                    materialRaisedButtonAddService.Enabled = false;
+                }
+                catch
+                {
+                    materialLabelInfo.ForeColor = Color.Red;
+                    materialLabelInfo.Text = "Ошибка";
+                }
+            }
         }
     }
 }
