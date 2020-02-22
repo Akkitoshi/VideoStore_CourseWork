@@ -193,7 +193,14 @@ namespace VideoStore_Controller
                 element.Frequency = element.Frequency+frq;
                 context.SaveChanges();
         }
-
+        //счетчик договоров по типу
+        public void Count(int counter, string Type)
+        {
+            Product element = context.Products.FirstOrDefault(rec => rec.Type ==
+          Type);
+            element.CountContracts = element.CountContracts + counter;
+            context.SaveChanges();
+        }
         // рассчитать сумму договора
         public int GetPrice(int id)
         {

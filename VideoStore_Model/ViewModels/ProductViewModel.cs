@@ -13,5 +13,6 @@ namespace VideoStore_Model.ViewModels
         public string Type { get; set; }
         [DisplayName("Цена")]
         public int Price { get; set; }
+        public int? CountContracts { get; set; }
     }
 }

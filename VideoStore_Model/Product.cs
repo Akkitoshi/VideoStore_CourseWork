@@ -18,6 +18,8 @@ namespace VideoStore_Model
         public string Type { get; set; }
         [DataMember]
         public int Price { get; set; }
+        [DataMember]
+        public int? CountContracts { get; set; }
         [ForeignKey("ProductId")]
         public virtual List<ClientContract> ClientContracts { get; set; }
     }

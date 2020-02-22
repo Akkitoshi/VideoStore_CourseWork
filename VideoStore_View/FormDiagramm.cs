@@ -10,6 +10,7 @@ using Unity;
 using Image = iTextSharp.text.Image;
 using VideoStore_Controller;
 using System.Data.SqlClient;
+using System.Configuration;
 using System.Data;
 
 namespace VideoStore_View
@@ -32,9 +33,42 @@ namespace VideoStore_View
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            chart1.Series[0].XValueMember = "ProductId";
-            chart1.DataBind();
+            GetChartData();
+
         }
+        private void GetChartData()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=AKKITOSHI\SQLEXPRESS;Initial Catalog=VideoDbContext;Integrated Security=true");
+            DataSet ds = new DataSet();
+            con.Open();
+            SqlDataAdapter adapt = new SqlDataAdapter("Select COUNT(*) as CountContracts,* FROM ClientContracts", con);
+            adapt.Fill(ds);
+            chart1.DataSource = ds;
+            //set the member of the chart data source used to data bind to the X-values of the series  
+            chart1.Series["Series1"].XValueMember = "ProductId";
+            //set the member columns of the chart data source used to data bind to the X-values of the series  
+            chart1.Series["Series1"].YValueMembers = "CountContracts";
+            con.Close();
+            /*string cs = @"Data Source=AKKITOSHI\SQLEXPRESS;Initial Catalog=VideoDbContext;Integrated Security=True";
+            using (SqlConnection con = new SqlConnection(cs))
+            {
+                // Command to retrieve contracts data from contracts table
+                SqlCommand cmd = new
+                    SqlCommand("Select * from ClientContracts", con);
+                con.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+                // Retrieve the Series to which we want to add DataPoints
+                Series series = chart1.Series["Series1"];
+                // Loop thru each contract record
+                while (rdr.Read())
+                {
+                    // Add X and Y values using AddXY() method
+                    series.Points.AddXY(rdr["ProductId"],
+                        rdr["SummaryPrice"]);
+                }
+            }*/
+        }
+
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
@@ -86,7 +120,7 @@ namespace VideoStore_View
 
         private void FormDiagramm_Load(object sender, EventArgs e)
         {
-
+            GetChartData();
         }
     }
 }

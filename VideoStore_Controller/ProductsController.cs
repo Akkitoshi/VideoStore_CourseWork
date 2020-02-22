@@ -24,7 +24,8 @@ namespace VideoStore_Controller
                 Id = rec.Id,
                 Type = rec.Type,
                 Price = rec.Price,
-                Name = rec.Name
+                Name = rec.Name,
+                CountContracts = rec.CountContracts
             })
             .ToList();
             return result;
@@ -47,7 +48,8 @@ namespace VideoStore_Controller
                         Id = model.Id,
                         Type = model.Type,
                         Price = model.Price,
-                        Name = model.Name
+                        Name = model.Name,
+                        CountContracts = null
                     };
                     context.Products.Add(element);
                     context.SaveChanges();
