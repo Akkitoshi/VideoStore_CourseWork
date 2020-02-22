@@ -26,11 +26,22 @@ namespace VideoStore_View.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=AKKITOSHI\\SQLEXPRESS;Initial Catalog=VideoDbContext;Integrated Securi" +
-            "ty=True")]
-        public string VideoDbContextConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=AKKITOSHI\\SQLEXPRESS;Initial Catalog=DBCourseWorkContext;Inte" +
+            "grated Security=True")]
+        public string DBCourseWorkContextConnectionString {
             get {
-                return ((string)(this["VideoDbContextConnectionString"]));
+                return ((string)(this["DBCourseWorkContextConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=AKKITOSHI\\SQLEXPRESS;Initial Catalog=VideoDbCourseContext;Integrated " +
+            "Security=True")]
+        public string VideoDbCourseContextConnectionString {
+            get {
+                return ((string)(this["VideoDbCourseContextConnectionString"]));
             }
         }
     }

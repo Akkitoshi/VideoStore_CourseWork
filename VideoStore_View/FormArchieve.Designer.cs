@@ -35,6 +35,9 @@
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialSingleLineTextFieldId = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialSingleLineTextFieldIdContract = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialLabelError = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +68,7 @@
             this.materialLabel1.BackColor = System.Drawing.Color.Transparent;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.Gray;
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel1.Location = new System.Drawing.Point(12, 70);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
@@ -79,11 +82,11 @@
             this.materialLabel2.BackColor = System.Drawing.Color.Transparent;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.Gray;
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel2.Location = new System.Drawing.Point(12, 284);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(87, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(82, 19);
             this.materialLabel2.TabIndex = 3;
             this.materialLabel2.Text = "Договоры";
             // 
@@ -98,6 +101,7 @@
             this.materialRaisedButton1.TabIndex = 4;
             this.materialRaisedButton1.Text = "Удалить клиента";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
             // materialRaisedButton2
             // 
@@ -110,12 +114,60 @@
             this.materialRaisedButton2.TabIndex = 5;
             this.materialRaisedButton2.Text = "Удалить договор";
             this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
+            // 
+            // materialSingleLineTextFieldId
+            // 
+            this.materialSingleLineTextFieldId.Depth = 0;
+            this.materialSingleLineTextFieldId.Hint = "ID клиента";
+            this.materialSingleLineTextFieldId.Location = new System.Drawing.Point(306, 276);
+            this.materialSingleLineTextFieldId.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextFieldId.Name = "materialSingleLineTextFieldId";
+            this.materialSingleLineTextFieldId.PasswordChar = '\0';
+            this.materialSingleLineTextFieldId.SelectedText = "";
+            this.materialSingleLineTextFieldId.SelectionLength = 0;
+            this.materialSingleLineTextFieldId.SelectionStart = 0;
+            this.materialSingleLineTextFieldId.Size = new System.Drawing.Size(310, 23);
+            this.materialSingleLineTextFieldId.TabIndex = 34;
+            this.materialSingleLineTextFieldId.UseSystemPasswordChar = false;
+            // 
+            // materialSingleLineTextFieldIdContract
+            // 
+            this.materialSingleLineTextFieldIdContract.Depth = 0;
+            this.materialSingleLineTextFieldIdContract.Hint = "ID договора";
+            this.materialSingleLineTextFieldIdContract.Location = new System.Drawing.Point(306, 481);
+            this.materialSingleLineTextFieldIdContract.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextFieldIdContract.Name = "materialSingleLineTextFieldIdContract";
+            this.materialSingleLineTextFieldIdContract.PasswordChar = '\0';
+            this.materialSingleLineTextFieldIdContract.SelectedText = "";
+            this.materialSingleLineTextFieldIdContract.SelectionLength = 0;
+            this.materialSingleLineTextFieldIdContract.SelectionStart = 0;
+            this.materialSingleLineTextFieldIdContract.Size = new System.Drawing.Size(295, 23);
+            this.materialSingleLineTextFieldIdContract.TabIndex = 35;
+            this.materialSingleLineTextFieldIdContract.UseSystemPasswordChar = false;
+            // 
+            // materialLabelError
+            // 
+            this.materialLabelError.AutoSize = true;
+            this.materialLabelError.BackColor = System.Drawing.Color.Transparent;
+            this.materialLabelError.Depth = 0;
+            this.materialLabelError.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabelError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabelError.Location = new System.Drawing.Point(12, 485);
+            this.materialLabelError.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabelError.Name = "materialLabelError";
+            this.materialLabelError.Size = new System.Drawing.Size(13, 19);
+            this.materialLabelError.TabIndex = 40;
+            this.materialLabelError.Text = "-";
             // 
             // FormArchieve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 510);
+            this.Controls.Add(this.materialLabelError);
+            this.Controls.Add(this.materialSingleLineTextFieldIdContract);
+            this.Controls.Add(this.materialSingleLineTextFieldId);
             this.Controls.Add(this.materialRaisedButton2);
             this.Controls.Add(this.materialRaisedButton1);
             this.Controls.Add(this.materialLabel2);
@@ -129,6 +181,7 @@
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormArchive";
+            this.Load += new System.EventHandler(this.FormArchieve_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
@@ -144,5 +197,8 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldId;
+        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldIdContract;
+        private MaterialSkin.Controls.MaterialLabel materialLabelError;
     }
 }

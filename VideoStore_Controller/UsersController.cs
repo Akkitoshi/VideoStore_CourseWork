@@ -10,9 +10,9 @@ namespace VideoStore_CourseWork
 {
     public class UsersController
     {
-        private VideoDbContext context;
+        private DBCourseWorkContext context;
 
-        public UsersController(VideoDbContext context)
+        public UsersController(DBCourseWorkContext context)
         {
             this.context = context;
         }

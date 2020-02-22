@@ -20,6 +20,7 @@ namespace VideoStore_Model
         public int Price { get; set; }
         [DataMember]
         public int? CountContracts { get; set; }
+
         [ForeignKey("ProductId")]
         public virtual List<ClientContract> ClientContracts { get; set; }
     }

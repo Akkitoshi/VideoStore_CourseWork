@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class NewVersionDB : DbMigration
+    public partial class MigrationNew : DbMigration
     {
         public override void Up()
         {
@@ -32,7 +32,7 @@
                         SummaryPrice = c.Int(nullable: false),
                         DateOfConclusion = c.DateTime(nullable: false),
                         RentalPeriodEnd = c.DateTime(nullable: false),
-                        ReturnDate = c.DateTime(nullable: true),
+                        ReturnDate = c.DateTime(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.ClientCards", t => t.ClientId, cascadeDelete: true)
@@ -52,6 +52,7 @@
                         Name = c.String(),
                         Type = c.String(),
                         Price = c.Int(nullable: false),
+                        CountContracts = c.Int(),
                     })
                 .PrimaryKey(t => t.Id);
             

@@ -6,10 +6,10 @@ namespace VideoStore_Controller
 {
     public class AuthController
     {
-        private VideoDbContext context;
+        private DBCourseWorkContext context;
         private readonly EncryptionController service;
         public string result = "Неверный логин или пароль";
-        public AuthController(VideoDbContext context, EncryptionController service)
+        public AuthController(DBCourseWorkContext context, EncryptionController service)
         {
             this.context = context;
             this.service = service;

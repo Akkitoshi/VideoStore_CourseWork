@@ -11,16 +11,18 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI;
 using System.Windows.Forms;
 
 namespace VideoStore_View
 {
-    public partial class FormReport : MaterialForm
+    public partial class FormSummaryTable : MaterialForm
     {
-        public FormReport()
+        public FormSummaryTable()
         {
             InitializeComponent();
             LoadData();
+
         }
         public void LoadData()
         {
@@ -28,8 +30,7 @@ namespace VideoStore_View
             SqlConnection con = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB;Initial Catalog=DBCourseWorkContext;Integrated Security=true");
             DataSet ds = new DataSet();
             con.Open();
-            string connectionString = "Select UserId, FIO , SummaryPrice, DateOfConclusion FROM  ClientContracts, Products, Users";
-            SqlDataAdapter adapt = new SqlDataAdapter(connectionString, con);
+            SqlDataAdapter adapt = new SqlDataAdapter("Select Type, SummaryPrice, DateOfConclusion FROM Services, ClientContracts, Products", con);
             adapt.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
             con.Close();
@@ -64,7 +65,7 @@ namespace VideoStore_View
                 {
                     Directory.CreateDirectory(folderPath);
                 }
-                using (FileStream stream = new FileStream(folderPath + "Работа_продавцов.pdf", FileMode.Create))
+                using (FileStream stream = new FileStream(folderPath + "Стоимость_договоров.pdf", FileMode.Create))
                 {
                     Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
                     PdfWriter.GetInstance(pdfDoc, stream);
@@ -84,6 +85,5 @@ namespace VideoStore_View
         }
     }
 }
-
 
 

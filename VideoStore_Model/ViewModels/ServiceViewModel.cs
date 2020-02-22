@@ -9,9 +9,8 @@ namespace VideoStore_Model.ViewModels
 {
     public class ServicesViewModel
     {
-        [DisplayName("Идентификатор сервиса")]
+
         public int Id { get; set; }
-        [DisplayName("Наименование")]
         public string Name { get; set; }
     }
 }

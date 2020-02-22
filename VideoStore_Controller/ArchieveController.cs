@@ -11,8 +11,8 @@ namespace VideoStore_Controller
 {
     public class ArchieveController
     {
-        private VideoDbContext context;
-        public ArchieveController(VideoDbContext context)
+        private DBCourseWorkContext context;
+        public ArchieveController(DBCourseWorkContext context)
         {
             this.context = context;
         }

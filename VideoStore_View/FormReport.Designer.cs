@@ -28,99 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.materialLabelError = new MaterialSkin.Controls.MaterialLabel();
+            this.buttonSave = new MaterialSkin.Controls.MaterialRaisedButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialSingleLineTextFieldYear = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialRaisedButtonCreate = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButtonExcel = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
+            // materialLabelError
+            // 
+            this.materialLabelError.AutoSize = true;
+            this.materialLabelError.BackColor = System.Drawing.Color.Transparent;
+            this.materialLabelError.Depth = 0;
+            this.materialLabelError.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabelError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabelError.Location = new System.Drawing.Point(112, 444);
+            this.materialLabelError.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabelError.Name = "materialLabelError";
+            this.materialLabelError.Size = new System.Drawing.Size(13, 19);
+            this.materialLabelError.TabIndex = 39;
+            this.materialLabelError.Text = "-";
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Depth = 0;
+            this.buttonSave.Location = new System.Drawing.Point(116, 410);
+            this.buttonSave.MouseState = MaterialSkin.MouseState.HOVER;
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Primary = true;
+            this.buttonSave.Size = new System.Drawing.Size(192, 31);
+            this.buttonSave.TabIndex = 38;
+            this.buttonSave.Text = "СОХРАНИТЬ";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 120);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 69);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 305);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(8, 66);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(54, 19);
-            this.materialLabel1.TabIndex = 1;
-            this.materialLabel1.Text = "За год";
-            // 
-            // materialSingleLineTextFieldYear
-            // 
-            this.materialSingleLineTextFieldYear.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.materialSingleLineTextFieldYear.Depth = 0;
-            this.materialSingleLineTextFieldYear.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.materialSingleLineTextFieldYear.Hint = "____";
-            this.materialSingleLineTextFieldYear.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.materialSingleLineTextFieldYear.Location = new System.Drawing.Point(68, 66);
-            this.materialSingleLineTextFieldYear.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextFieldYear.Name = "materialSingleLineTextFieldYear";
-            this.materialSingleLineTextFieldYear.PasswordChar = '\0';
-            this.materialSingleLineTextFieldYear.SelectedText = "";
-            this.materialSingleLineTextFieldYear.SelectionLength = 0;
-            this.materialSingleLineTextFieldYear.SelectionStart = 0;
-            this.materialSingleLineTextFieldYear.Size = new System.Drawing.Size(92, 23);
-            this.materialSingleLineTextFieldYear.TabIndex = 2;
-            this.materialSingleLineTextFieldYear.UseSystemPasswordChar = false;
-            // 
-            // materialRaisedButtonCreate
-            // 
-            this.materialRaisedButtonCreate.Depth = 0;
-            this.materialRaisedButtonCreate.Location = new System.Drawing.Point(166, 66);
-            this.materialRaisedButtonCreate.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButtonCreate.Name = "materialRaisedButtonCreate";
-            this.materialRaisedButtonCreate.Primary = true;
-            this.materialRaisedButtonCreate.Size = new System.Drawing.Size(186, 23);
-            this.materialRaisedButtonCreate.TabIndex = 3;
-            this.materialRaisedButtonCreate.Text = "Сформировать";
-            this.materialRaisedButtonCreate.UseVisualStyleBackColor = true;
-            // 
-            // materialRaisedButtonExcel
-            // 
-            this.materialRaisedButtonExcel.Depth = 0;
-            this.materialRaisedButtonExcel.Location = new System.Drawing.Point(358, 66);
-            this.materialRaisedButtonExcel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButtonExcel.Name = "materialRaisedButtonExcel";
-            this.materialRaisedButtonExcel.Primary = true;
-            this.materialRaisedButtonExcel.Size = new System.Drawing.Size(186, 23);
-            this.materialRaisedButtonExcel.TabIndex = 4;
-            this.materialRaisedButtonExcel.Text = "Сохранить в Excel";
-            this.materialRaisedButtonExcel.UseVisualStyleBackColor = true;
-            // 
-            // printDocument1
-            // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            this.dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.Size = new System.Drawing.Size(431, 335);
+            this.dataGridView1.TabIndex = 40;
             // 
             // FormReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.materialRaisedButtonExcel);
-            this.Controls.Add(this.materialRaisedButtonCreate);
-            this.Controls.Add(this.materialSingleLineTextFieldYear);
-            this.Controls.Add(this.materialLabel1);
+            this.ClientSize = new System.Drawing.Size(457, 462);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.materialLabelError);
+            this.Controls.Add(this.buttonSave);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormReport";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cтоимость заключенных договоров по видам услуг и месяцам года";
+            this.Text = "Работа продавцов";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -128,12 +106,8 @@
         }
 
         #endregion
-
+        private MaterialSkin.Controls.MaterialLabel materialLabelError;
+        private MaterialSkin.Controls.MaterialRaisedButton buttonSave;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldYear;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonCreate;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonExcel;
-        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

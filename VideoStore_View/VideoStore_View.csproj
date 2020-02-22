@@ -89,6 +89,7 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -200,6 +201,12 @@
     <Compile Include="FormSignUp.Designer.cs">
       <DependentUpon>FormSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSummaryTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSummaryTable.Designer.cs">
+      <DependentUpon>FormSummaryTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,14 +215,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VideoDbContextDataSet.cs">
-      <DependentUpon>VideoDbContextDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="VideoDbContextDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>VideoDbContextDataSet.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="FormArchieve.resx">
       <DependentUpon>FormArchieve.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,6 +260,9 @@
     <EmbeddedResource Include="FormSignUp.resx">
       <DependentUpon>FormSignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSummaryTable.resx">
+      <DependentUpon>FormSummaryTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUsers.resx">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,17 +285,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="VideoDbContextDataSet.xsc">
-      <DependentUpon>VideoDbContextDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="VideoDbContextDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>VideoDbContextDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="VideoDbContextDataSet.xss">
-      <DependentUpon>VideoDbContextDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

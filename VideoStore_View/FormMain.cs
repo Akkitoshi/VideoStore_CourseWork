@@ -77,5 +77,11 @@ namespace VideoStore_View
             var form1 = Container.Resolve<FormUsers>();
             form1.ShowDialog();
         }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            var form1 = Container.Resolve<FormSummaryTable>();
+            form1.ShowDialog();
+        }
     }
 }

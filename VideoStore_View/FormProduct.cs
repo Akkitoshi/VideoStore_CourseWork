@@ -47,7 +47,8 @@ namespace VideoStore_View
                             {
                                 Name = materialSingleLineTextFieldName.Text,
                                 Type = materialSingleLineTextFieldType.Text,
-                                Price = Convert.ToInt32(materialSingleLineTextFieldPrice.Text)
+                                Price = Convert.ToInt32(materialSingleLineTextFieldPrice.Text),
+                                CountContracts = 0
                             });
 
                             materialLabelInfo.ForeColor = Color.Green;

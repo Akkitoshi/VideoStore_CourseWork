@@ -8,9 +8,9 @@ namespace VideoStore_Controller
 {
     public class ProductsController
     {
-        private VideoDbContext context;
+        private DBCourseWorkContext context;
 
-        public ProductsController(VideoDbContext context)
+        public ProductsController(DBCourseWorkContext context)
         {
             this.context = context;
         }
@@ -49,7 +49,7 @@ namespace VideoStore_Controller
                         Type = model.Type,
                         Price = model.Price,
                         Name = model.Name,
-                        CountContracts = null
+                        CountContracts = model.CountContracts
                     };
                     context.Products.Add(element);
                     context.SaveChanges();

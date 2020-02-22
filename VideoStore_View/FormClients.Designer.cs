@@ -48,6 +48,7 @@
             this.materialSingleLineTextFieldFIOClent = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextFieldId = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialRaisedButtonDel = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.buttonSave = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,11 +93,11 @@
             // materialRaisedButtonCancel
             // 
             this.materialRaisedButtonCancel.Depth = 0;
-            this.materialRaisedButtonCancel.Location = new System.Drawing.Point(598, 558);
+            this.materialRaisedButtonCancel.Location = new System.Drawing.Point(428, 530);
             this.materialRaisedButtonCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonCancel.Name = "materialRaisedButtonCancel";
             this.materialRaisedButtonCancel.Primary = true;
-            this.materialRaisedButtonCancel.Size = new System.Drawing.Size(140, 23);
+            this.materialRaisedButtonCancel.Size = new System.Drawing.Size(153, 23);
             this.materialRaisedButtonCancel.TabIndex = 3;
             this.materialRaisedButtonCancel.Text = "сбросить";
             this.materialRaisedButtonCancel.UseVisualStyleBackColor = true;
@@ -296,11 +297,25 @@
             this.materialRaisedButtonDel.UseVisualStyleBackColor = true;
             this.materialRaisedButtonDel.Click += new System.EventHandler(this.materialRaisedButtonDel_Click);
             // 
+            // buttonSave
+            // 
+            this.buttonSave.Depth = 0;
+            this.buttonSave.Location = new System.Drawing.Point(587, 529);
+            this.buttonSave.MouseState = MaterialSkin.MouseState.HOVER;
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Primary = true;
+            this.buttonSave.Size = new System.Drawing.Size(151, 25);
+            this.buttonSave.TabIndex = 38;
+            this.buttonSave.Text = "СОХРАНИТЬ";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // FormClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(755, 631);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.materialRaisedButtonDel);
             this.Controls.Add(this.materialSingleLineTextFieldId);
             this.Controls.Add(this.materialSingleLineTextFieldPenalties);
@@ -351,5 +366,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldFIOClent;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldId;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonDel;
+        private MaterialSkin.Controls.MaterialRaisedButton buttonSave;
     }
 }

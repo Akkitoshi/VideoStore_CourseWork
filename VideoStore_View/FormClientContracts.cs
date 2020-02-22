@@ -1,7 +1,10 @@
-﻿using MaterialSkin.Controls;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using Unity;
 using VideoStore_Controller;
@@ -246,6 +249,54 @@ namespace VideoStore_View
                 materialLabelError.ForeColor = Color.Red;
                 materialLabelError.Text = "Ошибка";
             }
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                PdfPTable pdfTable = new PdfPTable(dataGridView1.Columns.Count);
+
+                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+                    pdfTable.AddCell(new Phrase(dataGridView1.Columns[j].HeaderText));
+                }
+                pdfTable.HeaderRows = 1;
+
+
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    for (int k = 0; k < dataGridView1.Columns.Count; k++)
+                    {
+                        if (dataGridView1[k, i].Value != null)
+                        {
+                            pdfTable.AddCell(new Phrase(dataGridView1[k, i].Value.ToString()));
+                        }
+                    }
+                }
+
+                string folderPath = @"C:\Users\Lenovo\";
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+                using (FileStream stream = new FileStream(folderPath + "Список договоров.pdf", FileMode.Create))
+                {
+                    Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
+                    PdfWriter.GetInstance(pdfDoc, stream);
+                    pdfDoc.Open();
+                    pdfDoc.Add(pdfTable);
+                    pdfDoc.Close();
+                    stream.Close();
+                }
+            }
+            catch
+            {
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Ошибка при сохранении";
+            }
+            materialLabelError.ForeColor = Color.Green;
+            materialLabelError.Text = "Успешное сохранение";
         }
     }
 }

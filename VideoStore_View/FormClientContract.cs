@@ -93,9 +93,13 @@ namespace VideoStore_View
                                             });
 
                                             materialLabelInfo.ForeColor = Color.Green;
-                                            materialLabelInfo.Text = "Договор добавлен";
-                                            materialRaisedButtonAddContract.Enabled = false;
-                                            service.UpdFrequency(1, Convert.ToInt32(materialSingleLineTextFieldClient.Text));
+                                        materialLabelInfo.Text = "Договор добавлен";
+
+                                        materialRaisedButtonAddContract.Enabled = false;
+                                        string Type = service.GetTypeProduct(Convert.ToInt32(materialSingleLineTextFieldProduct.Text));
+                                        service.Count(1, Type, Convert.ToInt32(materialSingleLineTextFieldProduct.Text));
+                                        service.UpdFrequency(1, Convert.ToInt32(materialSingleLineTextFieldClient.Text));
+                                           
                                         }
                                         catch
                                         {

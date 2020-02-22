@@ -29,7 +29,7 @@ namespace VideoStore_View
         private static IUnityContainer BuildUnityContainer()
         {
             var currentContainer = new UnityContainer();
-            currentContainer.RegisterType<DbContext, VideoDbContext>(new
+            currentContainer.RegisterType<DbContext, DBCourseWorkContext>(new
            HierarchicalLifetimeManager());
             currentContainer.RegisterType<ClientCardController>(new
            HierarchicalLifetimeManager());

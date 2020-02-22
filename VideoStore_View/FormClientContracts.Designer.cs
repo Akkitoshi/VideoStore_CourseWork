@@ -45,6 +45,7 @@
             this.materialRaisedButtonReturn = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButtonDel = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialSingleLineTextFieldId = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.buttonSave = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,7 +148,7 @@
             // materialRaisedButtonCancel
             // 
             this.materialRaisedButtonCancel.Depth = 0;
-            this.materialRaisedButtonCancel.Location = new System.Drawing.Point(875, 415);
+            this.materialRaisedButtonCancel.Location = new System.Drawing.Point(875, 446);
             this.materialRaisedButtonCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButtonCancel.Name = "materialRaisedButtonCancel";
             this.materialRaisedButtonCancel.Primary = true;
@@ -260,11 +261,25 @@
             this.materialSingleLineTextFieldId.TabIndex = 33;
             this.materialSingleLineTextFieldId.UseSystemPasswordChar = false;
             // 
+            // buttonSave
+            // 
+            this.buttonSave.Depth = 0;
+            this.buttonSave.Location = new System.Drawing.Point(875, 415);
+            this.buttonSave.MouseState = MaterialSkin.MouseState.HOVER;
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Primary = true;
+            this.buttonSave.Size = new System.Drawing.Size(310, 25);
+            this.buttonSave.TabIndex = 37;
+            this.buttonSave.Text = "СОХРАНИТЬ";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // FormClientContracts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1197, 461);
+            this.ClientSize = new System.Drawing.Size(1197, 490);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.materialRaisedButtonDel);
             this.Controls.Add(this.materialSingleLineTextFieldId);
             this.Controls.Add(this.materialRaisedButtonReturn);
@@ -308,5 +323,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonReturn;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButtonDel;
         private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextFieldId;
+        private MaterialSkin.Controls.MaterialRaisedButton buttonSave;
     }
 }

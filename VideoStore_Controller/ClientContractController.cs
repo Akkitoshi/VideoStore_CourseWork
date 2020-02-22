@@ -8,9 +8,9 @@ namespace VideoStore_Controller
 {
     public class ClientContractController
     {
-        private VideoDbContext context;
+        private DBCourseWorkContext context;
 
-        public ClientContractController(VideoDbContext context)
+        public ClientContractController(DBCourseWorkContext context)
         {
             this.context = context;
         }
@@ -190,16 +190,23 @@ namespace VideoStore_Controller
         {
             ClientCard element = context.ClientCards.FirstOrDefault(rec => rec.Id ==
           clientId);
-                element.Frequency = element.Frequency+frq;
-                context.SaveChanges();
+            element.Frequency = element.Frequency + frq;
+            context.SaveChanges();
+        }
+        // получить тип продукта
+        public string GetTypeProduct(int id)
+        {
+            Product element = context.Products.FirstOrDefault(rec => rec.Id == id);
+            string Type = element.Type;
+            return Type;
         }
         //счетчик договоров по типу
-        public void Count(int counter, string Type)
+        public void Count(int counter, string Type, int ProductId)
         {
-            Product element = context.Products.FirstOrDefault(rec => rec.Type ==
-          Type);
-            element.CountContracts = element.CountContracts + counter;
-            context.SaveChanges();
+                Product element = context.Products.FirstOrDefault(rec => rec.Type ==
+              Type && rec.Id == ProductId);
+                element.CountContracts = element.CountContracts + counter;
+                context.SaveChanges();
         }
         // рассчитать сумму договора
         public int GetPrice(int id)
@@ -219,6 +226,8 @@ namespace VideoStore_Controller
                    id);
                     if (element != null)
                     {
+                        Product element2 = context.Products.FirstOrDefault(rec => rec.Id == element.ProductId);
+                        element2.CountContracts = element2.CountContracts - 1;
                         context.ClientContracts.Remove(element);
                         context.SaveChanges();
                     }

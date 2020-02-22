@@ -68,13 +68,9 @@
   <ItemGroup>
     <Compile Include="ClientCard.cs" />
     <Compile Include="ClientContract.cs" />
-    <Compile Include="Migrations\202002161951437_NewVersionDB.cs" />
-    <Compile Include="Migrations\202002161951437_NewVersionDB.designer.cs">
-      <DependentUpon>202002161951437_NewVersionDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202002221047115_DB_Update.cs" />
-    <Compile Include="Migrations\202002221047115_DB_Update.designer.cs">
-      <DependentUpon>202002221047115_DB_Update.cs</DependentUpon>
+    <Compile Include="Migrations\202002221344345_MigrationNew.cs" />
+    <Compile Include="Migrations\202002221344345_MigrationNew.designer.cs">
+      <DependentUpon>202002221344345_MigrationNew.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
@@ -93,11 +89,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202002161951437_NewVersionDB.resx">
-      <DependentUpon>202002161951437_NewVersionDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202002221047115_DB_Update.resx">
-      <DependentUpon>202002221047115_DB_Update.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002221344345_MigrationNew.resx">
+      <DependentUpon>202002221344345_MigrationNew.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
