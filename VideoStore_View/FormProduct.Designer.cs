@@ -94,7 +94,7 @@
             this.materialLabelInfo.Depth = 0;
             this.materialLabelInfo.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabelInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabelInfo.Location = new System.Drawing.Point(37, 73);
+            this.materialLabelInfo.Location = new System.Drawing.Point(37, 75);
             this.materialLabelInfo.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelInfo.Name = "materialLabelInfo";
             this.materialLabelInfo.Size = new System.Drawing.Size(260, 19);
@@ -130,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(336, 269);
+            this.ClientSize = new System.Drawing.Size(336, 280);
             this.Controls.Add(this.labelRequiredFields);
             this.Controls.Add(this.materialRaisedButtonAddProduct);
             this.Controls.Add(this.materialLabelInfo);

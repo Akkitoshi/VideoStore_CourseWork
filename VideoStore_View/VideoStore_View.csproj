@@ -183,6 +183,24 @@
     <Compile Include="FormReport.Designer.cs">
       <DependentUpon>FormReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReport2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReport2.Designer.cs">
+      <DependentUpon>FormReport2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReport3.Designer.cs">
+      <DependentUpon>FormReport3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReports.Designer.cs">
+      <DependentUpon>FormReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormService.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +268,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormReport.resx">
       <DependentUpon>FormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport2.resx">
+      <DependentUpon>FormReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport3.resx">
+      <DependentUpon>FormReport3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReports.resx">
+      <DependentUpon>FormReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormService.resx">
       <DependentUpon>FormService.cs</DependentUpon>

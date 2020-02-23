@@ -1,7 +1,7 @@
-﻿using MaterialSkin;
-using MaterialSkin.Controls;
+﻿using MaterialSkin.Controls;
 using System;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using Unity;
 using VideoStore_Controller;
 
@@ -26,29 +26,43 @@ namespace VideoStore_View
             if (string.IsNullOrEmpty(materialSingleLineTextFieldLogin.Text))
             {
                 materialLabelInfo.ForeColor = Color.Red;
+                materialLabelInfo.Text = "Заполните поле логин";
 
             }
-            if (string.IsNullOrEmpty(materialSingleLineTextFieldPassword.Text))
+            if (materialSingleLineTextFieldLogin.Text.Length > 15)
             {
                 materialLabelInfo.ForeColor = Color.Red;
+                materialLabelInfo.Text = "Максимум символов 15";
             }
             else
             {
-                string res = service.CheckAuthInfo(materialSingleLineTextFieldLogin.Text, materialSingleLineTextFieldPassword.Text);
-                if (res == "ok")
+                if (string.IsNullOrEmpty(materialSingleLineTextFieldPassword.Text))
                 {
-                    this.Visible = false;
-                    var form1 = Container.Resolve<FormMain>();
-                    form1.ShowDialog();
+                    materialLabelInfo.ForeColor = Color.Red;
+                    materialLabelInfo.Text = "Заполните поле пароль";
+                }
+                if (materialSingleLineTextFieldPassword.Text.Length > 15)
+                {
+                    materialLabelInfo.ForeColor = Color.Red;
+                    materialLabelInfo.Text = "Максимум символов 15";
                 }
                 else
                 {
-                    materialLabelInfo.ForeColor = Color.Red;
-                    materialLabelInfo.Text = "Ошибка";
-                    return;
+                    string res = service.CheckAuthInfo(materialSingleLineTextFieldLogin.Text, materialSingleLineTextFieldPassword.Text);
+                    if (res == "ok")
+                    {
+                        this.Visible = false;
+                        var form1 = Container.Resolve<FormMain>();
+                        form1.ShowDialog();
+                    }
+                    else
+                    {
+                        materialLabelInfo.ForeColor = Color.Red;
+                        materialLabelInfo.Text = "Ошибка";
+                        return;
+                    }
                 }
             }
-
         }
 
         private void buttonSignUp_Click(object sender, EventArgs e)

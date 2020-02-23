@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Unity;
 using VideoStore_Controller;
@@ -43,10 +44,10 @@ namespace VideoStore_View
                         DataGridViewAutoSizeColumnMode.Fill;
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
-               MessageBoxIcon.Error);
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Ошибка";
             }
         }
 
@@ -62,15 +63,32 @@ namespace VideoStore_View
         private void materialRaisedButtonDel_Click(object sender, EventArgs e)
         {
             materialLabelError.ForeColor = Color.White;
-            try
-            {
-                service.delElement(Convert.ToInt32(materialSingleLineTextFieldId.Text));
-            }
-            catch (Exception ex)
+            if (materialSingleLineTextFieldId.Text.Length > 5)
             {
                 materialLabelError.ForeColor = Color.Red;
-                materialLabelError.Text = "Ошибка";
+                materialLabelError.Text = "Максимум символов 5";
             }
+            if (!(new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldId.Text).Success)
+            {
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Не цифровое значение";
+            }
+            else
+            {
+                try
+                {
+                    service.delElement(Convert.ToInt32(materialSingleLineTextFieldId.Text));
+                    materialLabelError.ForeColor = Color.Green;
+                    materialLabelError.Text = "Успешно";
+                    LoadData();
+                }
+                catch
+                {
+                    materialLabelError.ForeColor = Color.Red;
+                    materialLabelError.Text = "Ошибка";
+                }
+            }
+
         }
     }
 }

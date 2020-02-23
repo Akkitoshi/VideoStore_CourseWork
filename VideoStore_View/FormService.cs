@@ -1,6 +1,7 @@
 ﻿using MaterialSkin.Controls;
 using System;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using Unity;
 using VideoStore_CourseWork;
 using VideoStore_Model;
@@ -16,14 +17,26 @@ namespace VideoStore_View
         {
             InitializeComponent();
             this.service = service;
+            materialLabelInfo.ForeColor = Color.White;
         }
 
         private void materialRaisedButtonAddService_Click(object sender, EventArgs e)
         {
+
             if (string.IsNullOrEmpty(materialSingleLineTextFieldName.Text))
             {
                 materialLabelInfo.ForeColor = Color.Red;
                 materialLabelInfo.Text = "Заполните поле наименование";
+            }
+            if (materialSingleLineTextFieldName.Text.Length > 20)
+            {
+                materialLabelInfo.ForeColor = Color.Red;
+                materialLabelInfo.Text = "Максимум символов 20";
+            }
+            if ((new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldName.Text).Success)
+            {
+                materialLabelInfo.ForeColor = Color.Red;
+                materialLabelInfo.Text = "Не текстовое значение";
             }
             else
             {

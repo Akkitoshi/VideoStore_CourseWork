@@ -1,7 +1,7 @@
-﻿using MaterialSkin;
-using MaterialSkin.Controls;
+﻿using MaterialSkin.Controls;
 using System;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using Unity;
 using VideoStore_Controller;
 using VideoStore_Model;
@@ -29,6 +29,16 @@ namespace VideoStore_View
                 materialLabelInfo.ForeColor = Color.Red;
                 materialLabelInfo.Text = "Заполните поле ФИО";
             }
+            if (materialSingleLineTextFieldLogin.Text.Length > 15)
+            {
+                materialLabelInfo.ForeColor = Color.Red;
+                materialLabelInfo.Text = "Максимум символов 15";
+            }
+            if ((new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldLogin.Text).Success)
+            {
+                materialLabelInfo.ForeColor = Color.Red;
+                materialLabelInfo.Text = "Не текстовое значение";
+            }
             else
             {
                 materialLabelInfo.ForeColor = Color.Gray;
@@ -38,6 +48,16 @@ namespace VideoStore_View
                     materialLabelInfo.ForeColor = Color.Red;
                     materialLabelInfo.Text = "Выберите роль";
                 }
+                if (materialSingleLineTextFieldLogin.Text.Length > 15)
+                {
+                    materialLabelInfo.ForeColor = Color.Red;
+                    materialLabelInfo.Text = "Максимум символов 15";
+                }
+                if ((new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldLogin.Text).Success)
+                {
+                    materialLabelInfo.ForeColor = Color.Red;
+                    materialLabelInfo.Text = "Не текстовое значение";
+                }
                 else
                 {
                     materialLabelInfo.ForeColor = Color.Gray;
@@ -46,6 +66,16 @@ namespace VideoStore_View
                     {
                         materialLabelInfo.ForeColor = Color.Red;
                         materialLabelInfo.Text = "Заполните поле должность";
+                    }
+                    if (materialSingleLineTextFieldLogin.Text.Length > 15)
+                    {
+                        materialLabelInfo.ForeColor = Color.Red;
+                        materialLabelInfo.Text = "Максимум символов 15";
+                    }
+                    if ((new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldLogin.Text).Success)
+                    {
+                        materialLabelInfo.ForeColor = Color.Red;
+                        materialLabelInfo.Text = "Не текстовое значение";
                     }
                     else
                     {
@@ -57,11 +87,20 @@ namespace VideoStore_View
                             materialLabelInfo.ForeColor = Color.Red;
                             materialLabelInfo.Text = "Задайте логин";
                         }
+                        if (materialSingleLineTextFieldLogin.Text.Length > 15)
+                        {
+                            materialLabelInfo.ForeColor = Color.Red;
+                            materialLabelInfo.Text = "Максимум символов 15";
+                        }
                         else
                         {
                             materialLabelInfo.ForeColor = Color.Gray;
                             materialLabelInfo.Text = "Заполните обязательные поля";
-
+                            if (materialSingleLineTextFieldLogin.Text.Length > 15)
+                            {
+                                materialLabelInfo.ForeColor = Color.Red;
+                                materialLabelInfo.Text = "Максимум символов 15";
+                            }
                             if (string.IsNullOrEmpty(materialSingleLineTextFieldPassword.Text))
                             {
                                 materialLabelInfo.ForeColor = Color.Red;
@@ -101,9 +140,7 @@ namespace VideoStore_View
                         materialLabelInfo.ForeColor = Color.Red;
                         materialLabelInfo.Text = "Ошибка";
                     }
-
             }
         }
-
     }
 }

@@ -8,7 +8,6 @@ using System.IO;
 using System.Windows.Forms;
 using Unity;
 using VideoStore_Controller;
-using VideoStore_Model;
 using VideoStore_Model.ViewModels;
 
 namespace VideoStore_View
@@ -216,7 +215,7 @@ namespace VideoStore_View
         private void materialRaisedButtonReturn_Click(object sender, EventArgs e)
         {
             materialLabelError.ForeColor = Color.White;
-            if (Convert.ToInt32(materialSingleLineTextFieldContractNumber.Text) == 0)
+            if (string.IsNullOrEmpty(materialSingleLineTextFieldFIO.Text))
             {
                 materialLabelError.ForeColor = Color.Red;
                 materialLabelError.Text = "Введите идентификатор договора";

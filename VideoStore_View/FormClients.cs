@@ -5,10 +5,10 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Unity;
 using VideoStore_Controller;
-using VideoStore_Model;
 using VideoStore_Model.ViewModels;
 
 namespace VideoStore_View
@@ -67,32 +67,45 @@ namespace VideoStore_View
         private void materialRaisedButtonSearchByFio_Click(object sender, EventArgs e)
         {
             materialLabelError.ForeColor = Color.White;
-            if (!string.IsNullOrEmpty(materialSingleLineTextFieldFIO.Text))
+            if (materialSingleLineTextFieldFIO.Text.Length > 35)
             {
-                try
-                {
-                    List<ClientCardViewModel> list = service.getClientByFIO(materialSingleLineTextFieldFIO.Text);
-                    if (list != null)
-                    {
-                        dataGridView1.DataSource = list;
-                        dataGridView1.Columns[0].Visible = true;
-                        dataGridView1.Columns[1].Visible = true;
-                        dataGridView1.Columns[2].Visible = true;
-                        dataGridView1.Columns[3].Visible = true;
-                        dataGridView1.Columns[1].AutoSizeMode =
-                            DataGridViewAutoSizeColumnMode.Fill;
-                    }
-                }
-                catch
-                {
-                    materialLabelError.ForeColor = Color.Red;
-                    materialLabelError.Text = "Ошибка";
-                }
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Максимум символов 35";
+            }
+            if ((new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldFIO.Text).Success)
+            {
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Не текстовое значение";
             }
             else
             {
-                materialLabelError.ForeColor = Color.Red;
-                materialLabelError.Text = "Введите ФИО";
+                if (!string.IsNullOrEmpty(materialSingleLineTextFieldFIO.Text))
+                {
+                    try
+                    {
+                        List<ClientCardViewModel> list = service.getClientByFIO(materialSingleLineTextFieldFIO.Text);
+                        if (list != null)
+                        {
+                            dataGridView1.DataSource = list;
+                            dataGridView1.Columns[0].Visible = true;
+                            dataGridView1.Columns[1].Visible = true;
+                            dataGridView1.Columns[2].Visible = true;
+                            dataGridView1.Columns[3].Visible = true;
+                            dataGridView1.Columns[1].AutoSizeMode =
+                                DataGridViewAutoSizeColumnMode.Fill;
+                        }
+                    }
+                    catch
+                    {
+                        materialLabelError.ForeColor = Color.Red;
+                        materialLabelError.Text = "Ошибка";
+                    }
+                }
+                else
+                {
+                    materialLabelError.ForeColor = Color.Red;
+                    materialLabelError.Text = "Введите ФИО";
+                }
             }
 
         }
@@ -100,37 +113,50 @@ namespace VideoStore_View
         private void materialRaisedButtonSearchByPassport_Click(object sender, EventArgs e)
         {
             materialLabelError.ForeColor = Color.White;
-            if (materialSingleLineTextFieldPassportNumber.Text != emptyNumber)
+            if (materialSingleLineTextFieldPassportNumber.Text.Length > 10)
             {
-                try
-                {
-                    List<ClientCardViewModel> list = service.getByPassportNumber(materialSingleLineTextFieldPassportNumber.Text);
-                    if (list != null)
-                    {
-                        dataGridView1.DataSource = list;
-                        dataGridView1.Columns[0].Visible = true;
-                        dataGridView1.Columns[1].Visible = true;
-                        dataGridView1.Columns[2].Visible = true;
-                        dataGridView1.Columns[3].Visible = true;
-                        dataGridView1.Columns[1].AutoSizeMode =
-                            DataGridViewAutoSizeColumnMode.Fill;
-                    }
-                    if (list == null)
-                    {
-                        materialLabelError.ForeColor = Color.Red;
-                        materialLabelError.Text = "Клиенты отсутсвуют";
-                    }
-                }
-                catch
-                {
-                    materialLabelError.ForeColor = Color.Red;
-                    materialLabelError.Text = "Ошибка";
-                }
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Максимум символов 10";
+            }
+            if (!(new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldFIO.Text).Success)
+            {
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Не текстовое значение";
             }
             else
             {
-                materialLabelError.ForeColor = Color.Red;
-                materialLabelError.Text = "Введите номер паспорта";
+                if (materialSingleLineTextFieldPassportNumber.Text != emptyNumber)
+                {
+                    try
+                    {
+                        List<ClientCardViewModel> list = service.getByPassportNumber(materialSingleLineTextFieldPassportNumber.Text);
+                        if (list != null)
+                        {
+                            dataGridView1.DataSource = list;
+                            dataGridView1.Columns[0].Visible = true;
+                            dataGridView1.Columns[1].Visible = true;
+                            dataGridView1.Columns[2].Visible = true;
+                            dataGridView1.Columns[3].Visible = true;
+                            dataGridView1.Columns[1].AutoSizeMode =
+                                DataGridViewAutoSizeColumnMode.Fill;
+                        }
+                        if (list == null)
+                        {
+                            materialLabelError.ForeColor = Color.Red;
+                            materialLabelError.Text = "Клиенты отсутсвуют";
+                        }
+                    }
+                    catch
+                    {
+                        materialLabelError.ForeColor = Color.Red;
+                        materialLabelError.Text = "Ошибка";
+                    }
+                }
+                else
+                {
+                    materialLabelError.ForeColor = Color.Red;
+                    materialLabelError.Text = "Введите номер паспорта";
+                }
             }
         }
 
@@ -179,7 +205,7 @@ namespace VideoStore_View
                     dataGridView1.Columns[2].Visible = true;
                     dataGridView1.Columns[3].Visible = true;
                     dataGridView1.Columns[1].AutoSizeMode =
-                        DataGridViewAutoSizeColumnMode.Fill;     
+                        DataGridViewAutoSizeColumnMode.Fill;
                 }
                 materialLabelError.ForeColor = Color.White;
                 if (list == null)
@@ -247,28 +273,56 @@ namespace VideoStore_View
         private void materialRaisedButtonPenalties_Click(object sender, EventArgs e)
         {
             materialLabelError.ForeColor = Color.White;
-            if (string.IsNullOrEmpty(materialSingleLineTextFieldFIOClent.Text) )
+            if (materialSingleLineTextFieldFIO.Text.Length > 35)
+            {
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Максимум символов 35";
+            }
+            if ((new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldFIO.Text).Success)
+            {
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Не текстовое значение";
+            }
+
+            if (string.IsNullOrEmpty(materialSingleLineTextFieldFIOClent.Text))
             {
                 materialLabelError.ForeColor = Color.Red;
                 materialLabelError.Text = "Введите ФИО клиента";
             }
-            if (string.IsNullOrEmpty(materialSingleLineTextFieldPenalties.Text))
+            else
             {
-                materialLabelError.ForeColor = Color.Red;
-                materialLabelError.Text = "Введите количество пени";
-            }
-            try
-            {
-                string FIO = materialSingleLineTextFieldFIOClent.Text;
-                int Penalties = Convert.ToInt32(materialSingleLineTextFieldPenalties.Text);
-                service.UpdElement(FIO, Penalties);
-            materialLabelError.ForeColor = Color.Green;
-                materialLabelError.Text = "Добавление прошло успешно";
-            }
-            catch
-            {
-                materialLabelError.ForeColor = Color.Red;
-                materialLabelError.Text = "Ошибка";
+                if (materialSingleLineTextFieldPenalties.Text.Length > 4)
+                {
+                    materialLabelError.ForeColor = Color.Red;
+                    materialLabelError.Text = "Максимум символов 4";
+                }
+                if (!(new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldPenalties.Text).Success)
+                {
+                    materialLabelError.ForeColor = Color.Red;
+                    materialLabelError.Text = "Не цифровое значение";
+                }
+                if (string.IsNullOrEmpty(materialSingleLineTextFieldPenalties.Text))
+                {
+                    materialLabelError.ForeColor = Color.Red;
+                    materialLabelError.Text = "Введите количество пени";
+                }
+                else
+                {
+                    try
+                    {
+                        string FIO = materialSingleLineTextFieldFIOClent.Text;
+                        int Penalties = Convert.ToInt32(materialSingleLineTextFieldPenalties.Text);
+                        service.UpdElement(FIO, Penalties);
+                        materialLabelError.ForeColor = Color.Green;
+                        materialLabelError.Text = "Добавление прошло успешно";
+                    }
+                    catch
+                    {
+                        materialLabelError.ForeColor = Color.Red;
+                        materialLabelError.Text = "Ошибка";
+                    }
+                }
+
             }
         }
 
@@ -278,8 +332,10 @@ namespace VideoStore_View
             try
             {
                 service.delElement(Convert.ToInt32(materialSingleLineTextFieldId.Text));
+                materialLabelError.ForeColor = Color.Green;
+                materialLabelError.Text = "Успешно";
             }
-            catch (Exception ex)
+            catch 
             {
                 materialLabelError.ForeColor = Color.Red;
                 materialLabelError.Text = "Ошибка";

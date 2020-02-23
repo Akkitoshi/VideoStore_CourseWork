@@ -2,15 +2,12 @@
 using System;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
-using System;
 using System.IO;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 using Unity;
 using Image = iTextSharp.text.Image;
 using VideoStore_Controller;
 using System.Data.SqlClient;
-using System.Configuration;
 using System.Data;
 using System.Drawing;
 

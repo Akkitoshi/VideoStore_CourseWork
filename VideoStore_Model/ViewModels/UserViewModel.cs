@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-namespace VideoStore_Model.ViewModels
+﻿namespace VideoStore_Model.ViewModels
 {
     public class UserViewModel
     {

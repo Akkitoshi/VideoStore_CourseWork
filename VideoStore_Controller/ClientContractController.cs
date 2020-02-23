@@ -152,8 +152,8 @@ namespace VideoStore_Controller
         //поиск просроченных договоров
         public List<ClientContractViewModel> getByNoActive()
         {
-            List<ClientContractViewModel> result = context.ClientContracts.Where(rec => rec.ReturnDate > rec.RentalPeriodEnd || rec.ReturnDate==null && rec.RentalPeriodEnd < DateTime.Now).Select(rec => new
-           ClientContractViewModel
+            List<ClientContractViewModel> result = context.ClientContracts.Where(rec => rec.ReturnDate > rec.RentalPeriodEnd || rec.ReturnDate == null && rec.RentalPeriodEnd < DateTime.Now).Select(rec => new
+             ClientContractViewModel
             {
                 Id = rec.Id,
                 ClientId = rec.ClientId,
@@ -203,10 +203,10 @@ namespace VideoStore_Controller
         //счетчик договоров по типу
         public void Count(int counter, string Type, int ProductId)
         {
-                Product element = context.Products.FirstOrDefault(rec => rec.Type ==
-              Type && rec.Id == ProductId);
-                element.CountContracts = element.CountContracts + counter;
-                context.SaveChanges();
+            Product element = context.Products.FirstOrDefault(rec => rec.Type ==
+          Type && rec.Id == ProductId);
+            element.CountContracts = element.CountContracts + counter;
+            context.SaveChanges();
         }
         // рассчитать сумму договора
         public int GetPrice(int id)
@@ -215,6 +215,7 @@ namespace VideoStore_Controller
             int price = element.Price;
             return price;
         }
+
         //удалить контракт
         public void delElement(int id)
         {

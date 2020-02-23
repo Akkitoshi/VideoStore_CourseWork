@@ -56,14 +56,14 @@ namespace VideoStore_Controller
             User element = context.Users.FirstOrDefault(rec => rec.Login ==
           login && rec.Password == pass);
 
-                if (element != null)
-                {
-                    result = "ok";
-                }
-                else
-                {
-                    result = "Неверный логин или пароль";
-                }
+            if (element != null)
+            {
+                result = "ok";
+            }
+            else
+            {
+                result = "Неверный логин или пароль";
+            }
             return result;
         }
     }

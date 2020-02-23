@@ -1,6 +1,6 @@
 ﻿namespace VideoStore_View
 {
-    partial class FormReport
+    partial class FormReport3
     {
         /// <summary>
         /// Required designer variable.
@@ -30,39 +30,12 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReport));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReport3));
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.materialLabelError = new MaterialSkin.Controls.MaterialLabel();
             this.buttonSave = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // materialLabelError
-            // 
-            this.materialLabelError.AutoSize = true;
-            this.materialLabelError.BackColor = System.Drawing.Color.Transparent;
-            this.materialLabelError.Depth = 0;
-            this.materialLabelError.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabelError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabelError.Location = new System.Drawing.Point(144, 444);
-            this.materialLabelError.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabelError.Name = "materialLabelError";
-            this.materialLabelError.Size = new System.Drawing.Size(13, 19);
-            this.materialLabelError.TabIndex = 39;
-            this.materialLabelError.Text = "-";
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.Depth = 0;
-            this.buttonSave.Location = new System.Drawing.Point(148, 410);
-            this.buttonSave.MouseState = MaterialSkin.MouseState.HOVER;
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Primary = true;
-            this.buttonSave.Size = new System.Drawing.Size(192, 31);
-            this.buttonSave.TabIndex = 38;
-            this.buttonSave.Text = "СОХРАНИТЬ";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // dataGridView1
             // 
@@ -77,30 +50,57 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 69);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 70);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.Size = new System.Drawing.Size(501, 335);
-            this.dataGridView1.TabIndex = 40;
+            this.dataGridView1.Size = new System.Drawing.Size(593, 335);
+            this.dataGridView1.TabIndex = 43;
             // 
-            // FormReport
+            // materialLabelError
+            // 
+            this.materialLabelError.AutoSize = true;
+            this.materialLabelError.BackColor = System.Drawing.Color.Transparent;
+            this.materialLabelError.Depth = 0;
+            this.materialLabelError.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabelError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabelError.Location = new System.Drawing.Point(187, 445);
+            this.materialLabelError.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabelError.Name = "materialLabelError";
+            this.materialLabelError.Size = new System.Drawing.Size(13, 19);
+            this.materialLabelError.TabIndex = 42;
+            this.materialLabelError.Text = "-";
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Depth = 0;
+            this.buttonSave.Location = new System.Drawing.Point(191, 411);
+            this.buttonSave.MouseState = MaterialSkin.MouseState.HOVER;
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Primary = true;
+            this.buttonSave.Size = new System.Drawing.Size(192, 31);
+            this.buttonSave.TabIndex = 41;
+            this.buttonSave.Text = "СОХРАНИТЬ";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            // 
+            // FormReport3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(525, 462);
+            this.ClientSize = new System.Drawing.Size(617, 472);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.materialLabelError);
             this.Controls.Add(this.buttonSave);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormReport";
+            this.Name = "FormReport3";
             this.Sizable = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Работа продавцов";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Заключенные договора по видам товара";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -108,8 +108,9 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dataGridView1;
         private MaterialSkin.Controls.MaterialLabel materialLabelError;
         private MaterialSkin.Controls.MaterialRaisedButton buttonSave;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

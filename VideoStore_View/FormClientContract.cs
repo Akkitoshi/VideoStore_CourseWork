@@ -1,13 +1,7 @@
 ﻿using MaterialSkin.Controls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Text.RegularExpressions;
 using Unity;
 using VideoStore_Controller;
 using VideoStore_Model;
@@ -31,12 +25,32 @@ namespace VideoStore_View
                 materialLabelInfo.ForeColor = Color.Red;
                 materialLabelInfo.Text = "Заполните поле идентификатор клиента";
             }
+            if (materialSingleLineTextFieldClient.Text.Length > 5)
+            {
+                materialLabelInfo.ForeColor = Color.Red;
+                materialLabelInfo.Text = "Максимум символов 5";
+            }
+            if (!(new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldClient.Text).Success)
+            {
+                materialLabelInfo.ForeColor = Color.Red;
+                materialLabelInfo.Text = "Не цифровое значение";
+            }
             else
             {
                 if (string.IsNullOrEmpty(materialSingleLineTextFieldUser.Text))
                 {
                     materialLabelInfo.ForeColor = Color.Red;
                     materialLabelInfo.Text = "Заполните поле идентификатор продавца";
+                }
+                if (materialSingleLineTextFieldUser.Text.Length > 5)
+                {
+                    materialLabelInfo.ForeColor = Color.Red;
+                    materialLabelInfo.Text = "Максимум символов 5";
+                }
+                if (!(new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldUser.Text).Success)
+                {
+                    materialLabelInfo.ForeColor = Color.Red;
+                    materialLabelInfo.Text = "Не цифровое значение";
                 }
                 else
                 {
@@ -45,12 +59,32 @@ namespace VideoStore_View
                         materialLabelInfo.ForeColor = Color.Red;
                         materialLabelInfo.Text = "Заполните поле идентификатор услуги";
                     }
+                    if (materialSingleLineTextFieldService.Text.Length > 5)
+                    {
+                        materialLabelInfo.ForeColor = Color.Red;
+                        materialLabelInfo.Text = "Максимум символов 5";
+                    }
+                    if (!(new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldService.Text).Success)
+                    {
+                        materialLabelInfo.ForeColor = Color.Red;
+                        materialLabelInfo.Text = "Не цифровое значение";
+                    }
                     else
                     {
                         if (string.IsNullOrEmpty(materialSingleLineTextFieldProduct.Text))
                         {
                             materialLabelInfo.ForeColor = Color.Red;
                             materialLabelInfo.Text = "Заполните поле идентификатор прордукта";
+                        }
+                        if (materialSingleLineTextFieldProduct.Text.Length > 5)
+                        {
+                            materialLabelInfo.ForeColor = Color.Red;
+                            materialLabelInfo.Text = "Максимум символов 5";
+                        }
+                        if (!(new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldProduct.Text).Success)
+                        {
+                            materialLabelInfo.ForeColor = Color.Red;
+                            materialLabelInfo.Text = "Не цифровое значение";
                         }
                         else
                         {
@@ -59,6 +93,16 @@ namespace VideoStore_View
                                 materialLabelInfo.ForeColor = Color.Red;
                                 materialLabelInfo.Text = "Заполните поле количество";
                             }
+                            if (materialSingleLineTextFieldAmount.Text.Length > 5)
+                            {
+                                materialLabelInfo.ForeColor = Color.Red;
+                                materialLabelInfo.Text = "Максимум символов 5";
+                            }
+                            if (!(new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldAmount.Text).Success)
+                            {
+                                materialLabelInfo.ForeColor = Color.Red;
+                                materialLabelInfo.Text = "Не цифровое значение";
+                            }
                             else
                             {
                                 if (string.IsNullOrEmpty(materialSingleLineTextFieldStart.Text))
@@ -66,12 +110,32 @@ namespace VideoStore_View
                                     materialLabelInfo.ForeColor = Color.Red;
                                     materialLabelInfo.Text = "Заполните поле дата заключения";
                                 }
+                                if (materialSingleLineTextFieldStart.Text.Length > 10)
+                                {
+                                    materialLabelInfo.ForeColor = Color.Red;
+                                    materialLabelInfo.Text = "Максимум символов 10";
+                                }
+                                if (!(new Regex(@"\d{2}.\d{2}.\d{4}")).Match(materialSingleLineTextFieldStart.Text).Success)
+                                {
+                                    materialLabelInfo.ForeColor = Color.Red;
+                                    materialLabelInfo.Text = "Введите дату в формате дд.мм.гггг";
+                                }
                                 else
                                 {
                                     if (string.IsNullOrEmpty(materialSingleLineTextFieldRental.Text))
                                     {
                                         materialLabelInfo.ForeColor = Color.Red;
                                         materialLabelInfo.Text = "Заполните поле срок проката";
+                                    }
+                                    if (materialSingleLineTextFieldRental.Text.Length > 10)
+                                    {
+                                        materialLabelInfo.ForeColor = Color.Red;
+                                        materialLabelInfo.Text = "Максимум символов 10";
+                                    }
+                                    if (!(new Regex(@"\d{2}.\d{2}.\d{4}")).Match(materialSingleLineTextFieldRental.Text).Success)
+                                    {
+                                        materialLabelInfo.ForeColor = Color.Red;
+                                        materialLabelInfo.Text = "Введите дату в формате дд.мм.гггг";
                                     }
                                     else
                                     {
@@ -93,13 +157,13 @@ namespace VideoStore_View
                                             });
 
                                             materialLabelInfo.ForeColor = Color.Green;
-                                        materialLabelInfo.Text = "Договор добавлен";
+                                            materialLabelInfo.Text = "Договор добавлен";
 
-                                        materialRaisedButtonAddContract.Enabled = false;
-                                        string Type = service.GetTypeProduct(Convert.ToInt32(materialSingleLineTextFieldProduct.Text));
-                                        service.Count(1, Type, Convert.ToInt32(materialSingleLineTextFieldProduct.Text));
-                                        service.UpdFrequency(1, Convert.ToInt32(materialSingleLineTextFieldClient.Text));
-                                           
+                                            materialRaisedButtonAddContract.Enabled = false;
+                                            string Type = service.GetTypeProduct(Convert.ToInt32(materialSingleLineTextFieldProduct.Text));
+                                            service.Count(1, Type, Convert.ToInt32(materialSingleLineTextFieldProduct.Text));
+                                            service.UpdFrequency(1, Convert.ToInt32(materialSingleLineTextFieldClient.Text));
+
                                         }
                                         catch
                                         {

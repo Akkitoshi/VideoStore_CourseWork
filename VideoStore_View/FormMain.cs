@@ -55,7 +55,7 @@ namespace VideoStore_View
 
         private void materialRaisedButtonReports_Click(object sender, EventArgs e)
         {
-            var form1 = Container.Resolve<FormReport>();
+            var form1 = Container.Resolve<FormReports>();
             form1.ShowDialog();
         }
 

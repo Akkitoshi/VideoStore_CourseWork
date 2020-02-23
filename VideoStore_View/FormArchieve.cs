@@ -1,12 +1,8 @@
 ﻿using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Unity;
 using VideoStore_Controller;
@@ -49,10 +45,10 @@ namespace VideoStore_View
                 }
 
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
-               MessageBoxIcon.Error);
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Ошибка";
             }
         }
         public void LoadData2()
@@ -77,10 +73,10 @@ namespace VideoStore_View
                         DataGridViewAutoSizeColumnMode.Fill;
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
-               MessageBoxIcon.Error);
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Ошибка";
             }
         }
         private void FormArchieve_Load(object sender, EventArgs e)
@@ -92,45 +88,93 @@ namespace VideoStore_View
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-
-            int id =
-           Convert.ToInt32(materialSingleLineTextFieldId.Text);
-            try
+            if (materialSingleLineTextFieldId.Text != "")
             {
-                _ = service1.SaveToJsonAsyncClient("C:\\Users\\Lenovo\\BackupDeleteClient" + id + ".json");
-                service.delElement(id);
+                if (materialSingleLineTextFieldId.Text.Length < 5)
+                {
+                    if ((new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldId.Text).Success)
+                    {
+                        int id =
+           Convert.ToInt32(materialSingleLineTextFieldId.Text);
+                        try
+                        {
+                            _ = service1.SaveToJsonAsyncClient("C:\\Users\\Lenovo\\BackupDeleteClient" + id + ".json");
+                            service.delElement(id);
+                        }
+                        catch
+                        {
+                            materialLabelError.ForeColor = Color.Red;
+                            materialLabelError.Text = "Ошибка при сохранении";
+                        }
+                        materialLabelError.ForeColor = Color.Green;
+                        materialLabelError.Text = "Успешное сохранение";
+                        LoadData1();
+                        LoadData2();
+                    }
+                    else
+                    {
+                        materialLabelError.ForeColor = Color.Red;
+                        materialLabelError.Text = "Введите Id";
+                    }
+                }
+                else
+                {
+                    materialLabelError.ForeColor = Color.Red;
+                    materialLabelError.Text = "Значение больше максимума(5)";
+                }
             }
-            catch
+            else
             {
                 materialLabelError.ForeColor = Color.Red;
-                materialLabelError.Text = "Ошибка при сохранении";
+                materialLabelError.Text = "Введите Id";
             }
-            materialLabelError.ForeColor = Color.Green;
-            materialLabelError.Text = "Успешное сохранение";
-            LoadData1();
-            LoadData2();
 
         }
 
         private void materialRaisedButton2_Click(object sender, EventArgs e)
         {
-            int id =
-           Convert.ToInt32(materialSingleLineTextFieldIdContract.Text);
-            try
+            if (materialSingleLineTextFieldId.Text != "")
             {
-                _ = service1.SaveToJsonAsyncClient("C:\\Users\\Lenovo\\BackupDeleteContract" + id + ".json");
-                service2.delElement(id);
+                if (materialSingleLineTextFieldId.Text.Length < 5)
+                {
+                    if ((new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldId.Text).Success)
+                    {
+                        int id =
+           Convert.ToInt32(materialSingleLineTextFieldIdContract.Text);
+                        try
+                        {
+                            _ = service1.SaveToJsonAsyncClient("C:\\Users\\Lenovo\\BackupDeleteContract" + id + ".json");
+                            service2.delElement(id);
+                        }
+                        catch
+                        {
+                            materialLabelError.ForeColor = Color.Red;
+                            materialLabelError.Text = "Ошибка при сохранении";
+                        }
+                        materialLabelError.ForeColor = Color.Green;
+                        materialLabelError.Text = "Успешное сохранение";
+
+                        LoadData1();
+                        LoadData2();
+                    }
+                    else
+                    {
+                        materialLabelError.ForeColor = Color.Red;
+                        materialLabelError.Text = "Введите Id";
+                    }
+                }
+                else
+                {
+                    materialLabelError.ForeColor = Color.Red;
+                    materialLabelError.Text = "Значение больше максимума(5)";
+                }
             }
-            catch
+            else
             {
                 materialLabelError.ForeColor = Color.Red;
-                materialLabelError.Text = "Ошибка при сохранении";
+                materialLabelError.Text = "Введите Id";
             }
-            materialLabelError.ForeColor = Color.Green;
-            materialLabelError.Text = "Успешное сохранение";
 
-            LoadData1();
-            LoadData2();
         }
     }
 }

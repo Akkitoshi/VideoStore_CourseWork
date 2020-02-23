@@ -1,12 +1,8 @@
 ﻿using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Unity;
 using VideoStore_CourseWork;
@@ -43,25 +39,42 @@ namespace VideoStore_View
                     dataGridView1.Columns[3].Visible = false;
                     dataGridView1.Columns[1].AutoSizeMode =
                         DataGridViewAutoSizeColumnMode.Fill;
+
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
-               MessageBoxIcon.Error);
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Ошибка";
             }
         }
 
         private void materialRaisedButtonDel_Click(object sender, EventArgs e)
         {
-            try
+            if (materialSingleLineTextFieldId.Text.Length > 5)
             {
-                service.delElement(Convert.ToInt32(materialSingleLineTextFieldId.Text));
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Максимум символов 5";
             }
-            catch (Exception ex)
+            if (!(new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldId.Text).Success)
             {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
-               MessageBoxIcon.Error);
+                materialLabelError.ForeColor = Color.Red;
+                materialLabelError.Text = "Не цифровое значение";
+            }
+            else
+            {
+                try
+                {
+                    service.delElement(Convert.ToInt32(materialSingleLineTextFieldId.Text));
+                    LoadData();
+                    materialLabelError.ForeColor = Color.Green;
+                    materialLabelError.Text = "Успешно";
+                }
+                catch
+                {
+                    materialLabelError.ForeColor = Color.Red;
+                    materialLabelError.Text = "Ошибка";
+                }
             }
         }
     }

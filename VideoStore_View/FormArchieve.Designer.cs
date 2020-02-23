@@ -49,7 +49,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 101);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(764, 169);
+            this.dataGridView1.Size = new System.Drawing.Size(1128, 169);
             this.dataGridView1.TabIndex = 0;
             // 
             // dataGridView2
@@ -59,7 +59,7 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(12, 306);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(764, 169);
+            this.dataGridView2.Size = new System.Drawing.Size(1128, 169);
             this.dataGridView2.TabIndex = 1;
             // 
             // materialLabel1
@@ -93,7 +93,7 @@
             // materialRaisedButton1
             // 
             this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(622, 276);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(986, 277);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
@@ -106,7 +106,7 @@
             // materialRaisedButton2
             // 
             this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(622, 481);
+            this.materialRaisedButton2.Location = new System.Drawing.Point(986, 481);
             this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
@@ -120,7 +120,7 @@
             // 
             this.materialSingleLineTextFieldId.Depth = 0;
             this.materialSingleLineTextFieldId.Hint = "ID клиента";
-            this.materialSingleLineTextFieldId.Location = new System.Drawing.Point(306, 276);
+            this.materialSingleLineTextFieldId.Location = new System.Drawing.Point(670, 277);
             this.materialSingleLineTextFieldId.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldId.Name = "materialSingleLineTextFieldId";
             this.materialSingleLineTextFieldId.PasswordChar = '\0';
@@ -135,7 +135,7 @@
             // 
             this.materialSingleLineTextFieldIdContract.Depth = 0;
             this.materialSingleLineTextFieldIdContract.Hint = "ID договора";
-            this.materialSingleLineTextFieldIdContract.Location = new System.Drawing.Point(306, 481);
+            this.materialSingleLineTextFieldIdContract.Location = new System.Drawing.Point(685, 481);
             this.materialSingleLineTextFieldIdContract.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSingleLineTextFieldIdContract.Name = "materialSingleLineTextFieldIdContract";
             this.materialSingleLineTextFieldIdContract.PasswordChar = '\0';
@@ -164,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 510);
+            this.ClientSize = new System.Drawing.Size(1152, 510);
             this.Controls.Add(this.materialLabelError);
             this.Controls.Add(this.materialSingleLineTextFieldIdContract);
             this.Controls.Add(this.materialSingleLineTextFieldId);
@@ -180,7 +180,7 @@
             this.Name = "FormArchieve";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormArchive";
+            this.Text = "Архивация";
             this.Load += new System.EventHandler(this.FormArchieve_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

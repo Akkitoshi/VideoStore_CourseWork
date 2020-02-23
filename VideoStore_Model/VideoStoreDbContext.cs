@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Data.Entity;
 namespace VideoStore_Model
 {
-   public class DBCourseWorkContext : DbContext
+    public class DBCourseWorkContext : DbContext
     {
         public DBCourseWorkContext() : base("DBCourseWorkContext")
         {
             //настройки конфигурации для entity
             Configuration.ProxyCreationEnabled = false;
             Configuration.LazyLoadingEnabled = false;
-            var ensureDLLIsCopied =
+            _ =
            System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
         public DbSet<ClientCard> ClientCards { get; set; }
